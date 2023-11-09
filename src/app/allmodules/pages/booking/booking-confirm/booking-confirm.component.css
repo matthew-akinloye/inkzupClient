@@ -1,0 +1,51 @@
+.rating-submit{
+    width: 100%;
+    float: left;
+    background: #000;
+    padding:80px 0;
+}
+.rating_section{
+    width: 98%;
+    margin: 80px auto;
+}
+.rating_section h2{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 55px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    vertical-align: middle;
+}
+.rating_section p{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 17px;
+    line-height: 30px;
+    text-align: center;
+    color: #E0E0E0;
+    padding-bottom: 20px;
+}
+.rating_section button{
+    background: #5438FF;
+    border-radius: 10px;
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 33px;
+    color: #F2F2F7;
+    border: none;
+    padding: 10px 60px;
+    outline: none;
+}
+.rating_section a{
+    width: 100%;
+    float: left;
+    color: #5438FF;
+    padding-top: 20px;
+    font-size: 18px;
+    text-decoration: none;
+}

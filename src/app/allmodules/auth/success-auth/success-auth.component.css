@@ -1,0 +1,34 @@
+.delete_dialog{
+    width: 100%;
+    float: left;
+}
+.close_btn{
+    float: right;
+    color: #FFAC00;
+}
+.delete_txt{
+    width: 100%;
+    padding: 0 15px 15px;
+    float: left;
+    text-align: center;
+}
+.delete_txt h3{
+    color: #fff;
+    font-size: 25px;
+}
+.delete_txt p{
+    color: #E0E0E0;
+    font-weight: 300;
+}
+.delete_txt button{
+    background: #5438FF;
+    /* background: #04C600; */
+    border-radius: 8px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    padding: 12px;
+    float: left;
+    font-size: 20px;
+    margin-top: 20px;
+}

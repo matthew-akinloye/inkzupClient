@@ -1,0 +1,149 @@
+.auth {
+  background: #060606;
+  background-image: url(../../../../assets/images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  float: left;
+  padding: 50px 0 20px;
+  min-height: 100%;
+}
+
+.auth_img img {
+  width: 100%;
+}
+
+.auth_form {
+  width: 100%;
+  float: left;
+  padding: 50px 0 30px;
+  color: #fff;
+}
+
+.auth_form h3 {
+  font-weight: bold;
+  padding-bottom: 30px;
+  font-size: 35px;
+}
+
+.auth_form h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.mat-form-field {
+  width: 100%;
+  background: rgba(64, 64, 64, 0.5);
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+.auth_form img {
+  width: 65%;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-underline {
+  display: none;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #848282 !important;
+}
+
+.mat-form-field .mat-focused .mat-form-field-label {
+  color: #848282;
+}
+
+.auth_form h6 a {
+  color: #fff;
+}
+
+.submit_btn {
+  background: #5438ff;
+  border-radius: 10px;
+  width: 100%;
+  border: none;
+  color: #fff;
+  outline: none;
+  padding: 15px;
+  font-size: 16px;
+  float: left;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  transition: transform .2s cubic-bezier(.2,0,.4,1);
+}
+
+.or {
+  color: #dedede;
+  font-weight: 100;
+}
+
+.google_btn img {
+  width: 24px;
+  margin-right: 10px;
+}
+
+.google_btn {
+  border: 2px solid rgba(64, 64, 64, 0.6);
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 46%;
+  margin-right: 17px;
+  padding: 5px;
+  margin-top: 15px;
+  width: 100%;
+  /* transition: all 0.16s ease-in;
+  transition: all .3s linear; */
+  transition: transform .2s cubic-bezier(.2,0,.4,1);
+  }
+
+.foot p a {
+  color: #5438ff;
+  text-decoration: underline;
+}
+
+.foot {
+  font-weight: 100;
+  color: #dedede;
+  width: 100%;
+  float: left;
+  padding-top: 30px;
+}
+
+.errSpan {
+  width: 100%;
+  float: left;
+}
+
+.auth_img h2 {
+  font-size: 30px;
+  line-height: 45px;
+  color: #ffac00;
+  text-align: center;
+  padding: 20px 0px 0 0px;
+  width: 100%;
+  float: left;
+}
+.cursor {
+  cursor: pointer;
+}
+.termCondition {
+  color: #ffac00 !important;
+  /* text-decoration: none !important; */
+  background-color: transparent !important;
+}
+@media screen and (max-width: 767px) {
+  .auth_img{
+    display:none;
+  }
+}
+
+
+.google_btn:hover {
+  transform: translateY(-1px);
+}
+.submit_btn:hover {
+  transform: translateY(-2px);
+}

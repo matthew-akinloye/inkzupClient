@@ -1,0 +1,108 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="booking">
+  <div class="container">
+    <button><img src="assets/images/back_arrow.svg" (click)="back()" /></button>
+    <span>Bookings</span>
+    <div
+      *ngFor="
+        let booking of bookingHistory
+          | paginate: { itemsPerPage: 10, currentPage: page };
+        let i = index
+      "
+    >
+      <div
+        class="details_booking"
+        routerLink="/pages/view-booking/{{ booking.uuid }}"
+        style="cursor: pointer"
+      >
+        <div class="row">
+          <div class="col-md-2">
+            <img src="{{ booking.filename }}" />
+          </div>
+          <div class="col-md-10">
+            <div class="details_booking_text">
+              <h5>
+                {{ booking.artist_name }} | {{ booking.name }}
+                <div class="float-right d-flex mt-1">
+                  <div class="dropdown">
+                    <p *ngIf="booking.status == 4" style="color: #ff0000">
+                      Cancelled
+                    </p>
+                    <p *ngIf="booking.status == 1" style="color: #04c600">
+                      Complete
+                    </p>
+                    <p *ngIf="booking.status == 2" style="color: #38dbff">
+                      Scheduled
+                    </p>
+                    <p *ngIf="booking.status == 3" style="color: #ffac00">
+                      Pending
+                    </p>
+                    <p *ngIf="booking.status == 5" style="color: #38dbff">
+                      Rescheduled
+                    </p>
+                  </div>
+                  <p>
+                    <a
+                      *ngIf="
+                        booking.balance > 0 &&
+                        booking.status == 1 &&
+                        booking.payment_type == 1
+                      "
+                      routerLink="/pages/remaining-payment/{{ booking.uuid }}"
+                      class="pay_now"
+                      >Pay now
+                    </a>
+                  </p>
+                </div>
+              </h5>
+              <p>{{ booking.description }}.</p>
+              <div class="box_detail">
+                <div class="row">
+                  <div class="col-md-3 col-6">
+                    <h6>Date</h6>
+                    <p>{{ booking.date }}</p>
+                  </div>
+                  <div class="col-md-2 col-6 borders">
+                    <h6>Duration</h6>
+                    <p>{{ booking.duration }}</p>
+                  </div>
+                  <div class="col-md-2 col-6 border_right">
+                    <h6>Deposit</h6>
+                    <p>
+                      ${{
+                        booking.deposite == null
+                          ? 0
+                          : (booking.deposite | number)
+                      }}
+                    </p>
+                  </div>
+                  <div class="col-md-3 col-6 border_right">
+                    <h6>Total Amount</h6>
+                    <p>${{ booking.price | number }}</p>
+                  </div>
+                  <div class="col-md-2 col-6">
+                    <h6>Due Amount</h6>
+                    <p>${{ booking.balance | number }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="Page-navigation" *ngIf="collectionSize == 0">
+      <p style="color: #fff">No data found</p>
+    </div>
+    <div class="">
+      <div class="Page-navigation" *ngIf="collectionSize != 0">
+        <pagination-controls
+          (pageChange)="page = $event"
+          previousLabel=""
+          nextLabel=""
+        ></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>

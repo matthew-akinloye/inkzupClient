@@ -1,0 +1,60 @@
+<app-auth-loader *ngIf="isLoad"> </app-auth-loader>
+<div class="auth text-center">
+  <div class="container">
+    <div class="text-center">
+      <img class="cursor-pointer" routerLink="" src="assets/images/logo.svg" alt="Logo Image" class="pointer" />
+  </div>
+    <div class="col-lg-7 col-md-9 col-11 m-auto">
+      <div class="working_dialog">
+        <div class="working_txt">
+          <h2>VERIFY YOUR PHONE NUMBER</h2>
+          <div class="col-lg-6 col-md-10 mx-auto">
+            <img src="assets/images/phone_verify.png" class="img-fluid" />
+          </div>
+          <div class="col-lg-9 col-10 m-auto">
+            <form
+              name="phoneVerifyForm"
+              [formGroup]="phoneVerifyForm"
+              (ngSubmit)="sendPhoneOtp()"
+            >
+              <div class="mb-3">
+                <h6 class="text-left">Phone Number</h6>
+                <mat-form-field [floatLabel]="'never'">
+                  <input
+                    matInput
+                    placeholder="Phone"
+                    formControlName="phone"
+                    (keyup)="
+                      MakephoneFormat(
+                        $event,
+                        $event.keyCode == 8 ? true : false
+                      )
+                    "
+                    maxlength="14"
+                    autocomplete="off"
+                  />
+                  <img matPrefix src="assets/images/phone.png" />
+                  <img matSuffix src="assets/images/description.svg" />
+                </mat-form-field>
+                <span class="text-danger float-left errSpan" *ngIf="form_err">
+                  {{ form_err }}</span
+                >
+                <span class="text-danger float-left errSpan" *ngIf="phone_err">
+                  {{ phone_err }}</span
+                >
+              </div>
+
+              <button type="submit">Send Text Verification Code</button>
+            </form>
+            <!-- <a routerLink="/email-verify" *ngIf="client_login_type == 1"
+              >Send Email Verification</a
+            > -->
+            <a routerLink="/email-verify"
+              >Send Email Verification</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

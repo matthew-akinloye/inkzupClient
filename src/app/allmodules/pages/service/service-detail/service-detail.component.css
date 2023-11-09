@@ -1,0 +1,206 @@
+.inkzer_details {
+  width: 100%;
+  float: left;
+  /* padding: 130px 0; */
+  text-align: center;
+  /* background-image: url(../../../../../assets/images/Inkzers_detail_banner.png); */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Nunito", sans-serif !important;
+}
+.carousel {
+  width: 100%;
+  float: left;
+}
+.carousel-inner img {
+  opacity: 0.9;
+  object-fit: cover;
+  object-position: center;
+  width: 100%;
+  border-radius: 10px;
+  height: 700px;
+  transition: all 0.3s ease-in;
+}
+.item {
+  background-color: #000;
+}
+.carousel-caption {
+  top: 50%;
+}
+.carousel-indicators li {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin: 0 3px;
+}
+.width_70 {
+  width: 62%;
+  margin: 0 auto;
+}
+.inkzer_details h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 45px;
+  line-height: 50px;
+  color: #ffffff;
+}
+.inkzer_details p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  color: #ffffff;
+}
+.rate {
+  width: 100%;
+  float: left;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
+}
+.rate img {
+  vertical-align: baseline;
+}
+.save_book_btn {
+  width: 100%;
+  float: left;
+  background: #000;
+}
+.btn_section {
+  background: linear-gradient(180deg, rgba(251, 172, 24, 0.9) 0%, #ffac00 100%);
+  backdrop-filter: blur(40px);
+  border-radius: 200px;
+  width: 23%;
+  margin: 0 auto;
+  padding: 20px 30px;
+  text-align: center;
+  margin-top: -40px;
+}
+.btn_section button {
+  background: transparent;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 25px;
+  line-height: 38px;
+  text-align: center;
+  color: #000000;
+  border: none;
+  outline: none;
+  padding: 0 30px;
+}
+.about {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 0;
+}
+.about_text h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 23px;
+  color: #ffffff;
+}
+.about_text p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 14px;
+  color: #e0e0e0;
+  padding-top: 15px;
+  padding-right: 20px;
+  line-height: 28px;
+}
+.about_text button {
+  background: #5438ff;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+  width: 100%;
+  padding: 10px 0 15px;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+  float: left;
+}
+.amount {
+  width: 80%;
+}
+.amount p {
+  font-size: 16px;
+}
+.amount h6 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 33px;
+  color: #ffffff;
+  padding-right: 20px;
+}
+.about_location {
+  background: #161616;
+  border-radius: 10px;
+  width: 100%;
+  float: left;
+}
+.board_about {
+  padding: 30px 35px 25px;
+  border-bottom: 2px solid #000000;
+}
+.board_about img {
+  background: #ffac00;
+  border-radius: 10px;
+  padding: 12px;
+  margin-top: 10px;
+}
+.board_about h4 {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 33px;
+  color: #ffffff;
+}
+.board_about p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 100;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+}
+.board_about a img {
+  background: transparent;
+  margin-top: 0;
+  padding-top: 0;
+  padding-left: 0;
+}
+.item {
+  display: none;
+  position: relative;
+  transition: transition(0.6s ease-in-out left);
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .board_about img {
+    padding: 8px;
+    width: 50px;
+  }
+}
+
+.redTxt {
+  cursor: pointer;
+  color: #ffac00;
+  /* text-decoration: underline; */
+}

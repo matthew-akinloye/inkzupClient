@@ -1,0 +1,9 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="delete_dialog">
+    <button mat-icon-button class="close_btn" mat-dialog-close><mat-icon>close</mat-icon></button>
+    <div class="delete_txt">
+    <h3>Delete Card</h3>
+    <p>Are you sure want to delete this card?</p>
+    <button (click)="onYesClick()">Delete</button>
+</div>
+</div>

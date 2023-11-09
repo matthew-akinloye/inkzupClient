@@ -1,0 +1,96 @@
+.auth {
+  background: #060606;
+  background-image: url(../../../../../assets/images/background.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  max-width: 100%;
+  float: left;
+  padding: 30px 0 20px;
+  /*height: 100vh;*/
+  min-height: 100%;
+}
+.auth_img img {
+  width: 100%;
+}
+.auth_form {
+  width: 100%;
+  float: left;
+  padding: 25px 0px 30px;
+  color: #fff;
+  background: #1e1e1e;
+}
+.auth h3 {
+  font-weight: bold;
+  padding-bottom: 5px;
+  font-size: 30px;
+  color: #fff;
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+}
+.auth p {
+  color: #e0e0e0;
+  width: 80%;
+  margin: 0 auto;
+  padding-bottom: 50px;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 25px;
+}
+.auth_form h6 {
+  font-size: 14px;
+  font-weight: 500;
+}
+.auth_form img {
+  width: 65%;
+}
+.auth_form h6 a {
+  color: #fff;
+}
+
+.auth_form p a {
+  color: #ffac00;
+  text-decoration: underline;
+}
+.auth_form p {
+  font-weight: 100;
+  color: #dedede;
+  width: 100%;
+  float: left;
+  padding-bottom: 10px;
+}
+.account {
+  width: 100%;
+  float: left;
+  padding: 20px 30px;
+  position: relative;
+}
+.account_img_box {
+  background: #000000;
+  border-radius: 20px;
+  width: 100%;
+  float: left;
+  margin-bottom: 25px;
+}
+.account_img_box img {
+  padding: 20px;
+  width: 100%;
+}
+.account_text h5 {
+  font-size: 20px;
+  font-weight: 600;
+  white-space: break-spaces;
+  margin: 47px 33px;
+}
+.account_check .account_text p {
+  color: #e0e0e0;
+  font-size: 14px;
+  padding-bottom: 20px;
+  white-space: normal;
+}
+@media screen and (max-width:767px) {
+  .account_text h5{
+    margin: 45px 0;
+  }
+}

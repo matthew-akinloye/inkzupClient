@@ -1,0 +1,95 @@
+.privacy-policy{
+    width: 100%;
+    float: left;
+    background: #000;
+    padding:80px 0;
+}
+.privacy-policy button{
+    background: none;
+    border: none;
+    outline: none;
+}
+.privacy-policy button img{
+    width: 15px;
+}
+.privacy-policy span{
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 55px;
+    letter-spacing: 0.2px;
+    color: #FFFFFF;
+    vertical-align: middle;
+    padding-left: 10px;
+}
+.privacy-policy ul li{
+    font-family: Nunito;
+font-style: normal;
+font-weight: 200;
+font-size: 16px;
+line-height: 27px;
+color: #E0E0E0;
+padding: 15px 0;
+}
+.privacy-policy ul li::marker{
+    font-size: 25px;
+    color: #FBAC18;
+}
+.content{
+    width: 100%;
+    float: left;
+    padding: 10px 40px;
+}
+h5{
+    color: #fff;
+}
+ul{
+    padding: 5px 20px;
+}
+ul li{
+    font-family: Nunito;
+font-style: normal;
+font-weight: 200;
+font-size: 16px;
+line-height: 27px;
+color: #E0E0E0;
+padding: 10px;
+list-style: disc;
+}
+li::marker{
+    color: #fbac18;
+    font-size: 24px;
+}
+Strong{
+    width: 100%;
+    float: left;
+    color: #E0E0E0;
+    padding: 0 39px;
+    font-weight: 300;
+    font-size: 16px;
+}
+small{
+    width: 100%;
+    float: left;
+    color: #fff;
+    padding: 6px 39px;
+    font-size: 16px;
+    font-weight: 100;
+    line-height: 30px;
+
+}
+.content{
+    width: 100%;
+    float: left;
+    padding: 20px  40px;
+}
+.privacy-policy p{
+    font-family: Nunito;
+font-style: normal;
+font-weight: 200;
+font-size: 16px;
+line-height: 27px;
+color: #E0E0E0;
+/* padding: 15px 0; */
+}

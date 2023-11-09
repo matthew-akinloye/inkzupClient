@@ -1,0 +1,62 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="add-card">
+    <div class="container">
+        <button><img src="assets/images/back_arrow.svg" alt="" (click)="back()"></button>
+        <span>Add card</span>
+        <p>Securely save your card details for hassle-free payments</p>
+        <div class="card_box">
+            <span class="text-danger errSpan float-left" *ngIf="formErr "> {{formErr }}</span>
+            <form name="addCardForm" [formGroup]="addCardForm" (ngSubmit)="addNewCard()">
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Card holder full name</h6>
+                        <mat-form-field [floatLabel]="'never'" class="mb-3">
+                            <input matInput formControlName="name">
+                            <img matPrefix src="assets/images/person.svg">
+                        </mat-form-field>
+                        <span class="text-danger float-left errSpan" *ngIf="submitted && f.name.errors">The card holder
+                            full name is required.</span>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>Card number</h6>
+                        <mat-form-field [floatLabel]="'never'" class="mb-3">
+                            <input (keyup)="CardFormet($event)" matInput placeholder="Card Number"
+                                formControlName="number" maxlength="16">
+                            <img matPrefix src="assets/images/card.svg">
+                        </mat-form-field>
+                        <span class="text-danger float-left errSpan" *ngIf="submitted && f.number.errors">The Card
+                            number is required.</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <h6>Expiration Date</h6>
+                        <mat-form-field [floatLabel]="'never'" class="mb-3">
+                            <input placeholder="MM/YY" matInput formControlName="expiryDate"
+                                (keyup)="expDateValidators($event)" maxlength="5">
+                            <img matPrefix src="assets/images/clock.png">
+                        </mat-form-field>
+                        <span class="text-danger float-left errSpan" *ngIf="submitted && f.expiryDate.errors">Please
+                            enter valid Expiration date.</span>
+                    </div>
+                    <div class="col-md-6">
+                        <h6>CVV</h6>
+                        <mat-form-field [floatLabel]="'never'" class="mb-3">
+                            <input matInput placeholder="CVV" formControlName="cvv" maxlength="3" type="number"
+                                onKeyPress="if(this.value.length==3) return false" (keyup)="cvvFormat($event)">
+                            <img matPrefix src="assets/images/card.svg">
+                        </mat-form-field>
+                        <span class="text-danger float-left errSpan" *ngIf="submitted && f.cvv.errors">The cvv field is
+                            required.</span>
+                    </div>
+                </div>
+                <div class="form-bottom-btn">
+                    <p>
+                        <button type="button" routerLink="/pages/profile" class="cancel-btn">Cancel</button>
+                        <button class="edit-btn mr-4">Save</button>
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

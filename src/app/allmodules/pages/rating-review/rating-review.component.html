@@ -1,0 +1,25 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="rating">
+    <div class="container">
+        <p>We appreciate your review and rating on your Inkzer's work and professionalism.  This helps them get more bookings and grow their business.</p>
+        <h6>Rating</h6>
+        <form  name="AddBookingDetailsForm" [formGroup]="reviewForm" (ngSubmit)="addReview()">
+            <ngx-stars [initialStars]="rating" [color]="'#FFAC00'" [readonly]="false" [size]="3" [maxStars]="5" (ratingOutput)="onRatingSet($event)"></ngx-stars>
+
+            <span class="text-danger float-left errSpan" *ngIf="rating_err">{{rating_err}}</span>
+            <h6>Review</h6>
+            <mat-form-field [floatLabel]="'never'">
+                <textarea matInput placeholder="Enter Review" rows="5" formControlName="feedback"></textarea>
+
+                <img matPrefix src="assets/images/description.svg">
+            </mat-form-field>
+            <span class="text-danger float-left errSpan"  *ngIf="submitted && f.feedback.errors?.required">Please enter review.</span>
+            <span class="text-danger float-left errSpan"  *ngIf="submitted && f.feedback.errors?.minlength"> Please enter more details.</span>
+
+            <div class="mt-4">
+                <button class="cancel_btn" routerLink="/pages/get-inkzed">Cancel</button>
+                <button class="save_btn float-right" type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+</div>

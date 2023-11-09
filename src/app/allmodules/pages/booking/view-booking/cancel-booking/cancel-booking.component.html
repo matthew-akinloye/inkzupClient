@@ -1,0 +1,11 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="delete_dialog">
+    <button mat-icon-button class="close_btn" mat-dialog-close>
+        <mat-icon>close</mat-icon>
+    </button>
+    <div class="delete_txt">
+        <h3>Cancel booking</h3>
+        <p>Are you sure want to cancel this booking?</p>
+        <button (click)="onYesClick()">Cancel</button>
+    </div>
+</div>

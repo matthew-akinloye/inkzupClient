@@ -1,0 +1,110 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<div class="inkzer_details">
+    <div class="">
+        <div id="demo" class="carousel slide" data-ride="carousel">
+            <ul class="carousel-indicators">
+                <li data-target="#demo" data-slide-to="0" *ngFor="let slider of services;let i = index;"
+                    [ngClass]="(i === 0) ? 'active' : ''" data-interval="1000"></li>
+            </ul>
+            <div class="carousel-inner">
+                <div *ngFor="let slider of services;let i = index;" class="item" [ngClass]="(i === 0) ? 'active' : ''"
+                    data-interval="1000">
+                    <img [src]="services[i]" alt="{{service.name}}">
+                    <div class="carousel-caption">
+                        <h3>{{service.name}}</h3>
+                    </div>
+                </div>
+
+            </div>
+            <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#demo" data-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="about">
+    <div class="container">
+        <div class="row pb-5" style="border-bottom: 4px solid #161616;">
+            <div class="col-md-6">
+                <div class="about_text">
+                    <h2>Description</h2>
+                    <p>{{service.description}}</p>
+                    <div class="amount">
+                        <p>Duration <span class="float-right">Amount</span></p>
+                        <h6>{{service.duration}}<span class="float-right">${{service.price}}</span></h6>
+                    </div>
+                    <button (click)="bookService(service.user_uuid,service.id)">Book Now</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="about_location">
+                    <div class="board_about">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="assets/images/location1.svg">
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Location</h4>
+                                <p>{{service.studio_name}} </p>
+                                <p>{{service.street}} {{service.route}} {{service.city}},
+                                    {{service.zipcode}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_about">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="assets/images/policy1.svg">
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Policies</h4>
+                                <p class="pb-5"><b>Refund Policy:</b>
+                                    <span class="collapsable "> {{ (info_refund.length>firstCount) ? (info_refund |
+                                        slice:0:counter)+'..':(info_refund) }}
+                                        <span class="redTxt" *ngIf="(info_refund.length>100)"
+                                            (click)="toggleSkil(info_refund)">
+                                            {{showTxt_refund}}
+                                        </span>
+                                    </span>
+
+                                </p>
+                                <p><b>Cancellation Policy:</b>
+                                    <span class="collapsable "> {{ (info_cancel.length>firstCount) ? (info_cancel |
+                                        slice:0:counter_cancel)+'..':(info_cancel) }}
+                                        <span class="redTxt" *ngIf="(info_cancel.length>100)"
+                                            (click)="toggleCancel(info_cancel)">
+                                            {{showTxt_cancel}}
+                                        </span>
+                                    </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="board_about">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img src="assets/images/link1.svg">
+                            </div>
+                            <div class="col-md-9">
+                                <h4>Links</h4>
+                                <a *ngIf="service.fb_link" (click)="FB()"><img src="assets/images/facebook.svg"></a>
+                                <a *ngIf="service.instagram_link" (click)="insta()"><img
+                                        src="assets/images/instagram.svg"></a>
+                                <a *ngIf="service.website_link" (click)="website()"><img
+                                        src="assets/images/website.svg"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

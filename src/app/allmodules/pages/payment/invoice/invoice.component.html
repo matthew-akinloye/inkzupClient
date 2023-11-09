@@ -1,0 +1,53 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="invoice">
+  <div class="container">
+    <button><img src="assets/images/back_arrow.svg" (click)="back()" /></button>
+    <span>Payment History</span>
+    <div class="row">
+      <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <div class="invoice_box">
+          <div class="invoice_head">
+            <h4>Invoice #{{ paymentDetails.id }}</h4>
+            <h6>{{ paymentDetails.date }}</h6>
+            <p>Completed</p>
+          </div>
+          <div class="invoice_body">
+            <div class="row">
+              <div class="col-md-8">
+                <h6>{{ paymentDetails.name }}</h6>
+                <p>{{ paymentDetails.booking_date }}</p>
+              </div>
+              <div class="col-md-4">
+                <h5 class="float-right">${{ paymentDetails.price }}</h5>
+              </div>
+            </div>
+          </div>
+          <div class="invoice_footer">
+            <h4>
+              Total Revenue
+              <span class="float-right"
+                >${{ paymentDetails.price | number }}</span
+              >
+            </h4>
+            <h4>
+              Deposit
+              <span class="float-right"
+                >${{ paymentDetails.deposite | number }}</span
+              >
+            </h4>
+            <h4>Cash <span class="float-right">$0</span></h4>
+          </div>
+          <div class="balance_box">
+            <img src="assets/images/money.svg" /> Balance: ${{
+              paymentDetails.balance <= 0
+                ? 0.0
+                : (paymentDetails.balance | number)
+            }}
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3"></div>
+    </div>
+  </div>
+</div>

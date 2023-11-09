@@ -1,0 +1,247 @@
+.view_booking {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 0;
+}
+
+.view_booking button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.view_booking button img {
+  width: 11px;
+}
+
+.errSpan {
+  font-size: 16px !important;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.text-danger {
+  line-height: 24px !important;
+}
+
+.select_box {
+  width: 100%;
+}
+
+.custom-select {
+  width: 36% !important;
+}
+
+.mat-form-field-underline {
+  bottom: 0 !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  bottom: 0 !important;
+}
+
+.view_booking span {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 55px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.save_btn {
+  background: #5438ff !important;
+  color: #fff;
+  border: 1px solid #5438ff !important;
+  padding: 0px 35px 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  line-height: 20px;
+}
+
+.consent {
+  width: 100%;
+  float: left;
+  background: #161616;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px 65px;
+}
+
+.consent h4 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.consent ul li {
+  list-style-type: disc;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+  padding: 10px;
+  /* margin: 0 20px; */
+}
+
+.consent ul li::marker {
+  font-size: 25px;
+  color: #fbac18;
+}
+
+.check {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+  padding-bottom: 31px;
+}
+
+.consent_form p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 27px;
+  color: #ffffff;
+  float: left;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.consent_form {
+  width: 100%;
+  float: left;
+}
+
+.consent_form .row {
+  width: 100%;
+  float: left;
+}
+
+p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.signature {
+  font-weight: 400 !important;
+  font-size: 20px !important;
+}
+
+#select_box {
+  display: flow-root;
+}
+
+.mat-checkbox {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .consent {
+    padding: 30px;
+  }
+  .consent ul li::marker {
+    font-size: 20px;
+  }
+  .consent ul li {
+    font-size: 13px;
+  }
+  .custom-select {
+    width: 100% !important;
+  }
+  #select_box {
+    padding: 0 !important;
+  }
+  #inputGroupSelect01 {
+    padding-left: 13px !important;
+  }
+}
+
+.consant-input {
+  text-align: center;
+}
+
+@media screen and (max-width: 900px) {
+  .custom-select {
+    width: 90% !important;
+  }
+}
+
+.checkErr {
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.consent_form .mat-checkbox p {
+  padding-top: 0;
+}
+
+.consent_form .mat-checkbox-inner-container {
+  margin-top: 5px !important;
+}
+
+input[type="date"] {
+  position: relative;
+}
+
+/* create a new arrow, because we are going to mess up the native one
+see "List of symbols" below if you want another, you could also try to add a font-awesome icon.. */
+
+input[type="date"]:after {
+  content: "\25BC";
+  color: #555;
+  /* padding: 0 5px; */
+}
+
+/* change color of symbol on hover */
+
+input[type="date"]:hover:after {
+  color: #bf1400;
+}
+
+/* make the native arrow invisible and stretch it over the whole field so you can click anywhere in the input field to trigger the native datepicker*/
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: auto;
+  height: auto;
+  color: transparent;
+  background: transparent;
+}
+
+/* adjust increase/decrease button */
+
+input[type="date"]::-webkit-inner-spin-button {
+  z-index: 1;
+}
+
+/* adjust clear button */
+
+input[type="date"]::-webkit-clear-button {
+  z-index: 1;
+}

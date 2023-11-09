@@ -1,0 +1,185 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="view_booking">
+  <div class="container">
+    <div class="view_field">
+      <button>
+        <img src="assets/images/back_arrow.svg" alt="" (click)="back()" />
+        <span>Booking Time</span>
+      </button>
+     
+      <div class="row">
+        <div class="col-md-7 order-2">
+          <div class="view_profile_booking">
+          
+            <form
+              name="addAboutmeForm"
+              [formGroup]="AddBookingTimeForm"
+              (ngSubmit)="addBookingTime()"
+            >
+              <div class="row">
+                <div class="col-md-12 pt-4">
+                  <h6>Total Amount</h6>
+                  <mat-form-field [floatLabel]="'never'">
+                    <input
+                      matInput
+                      placeholder="Enter price"
+                      formControlName="amount"
+                      readonly
+                    />
+                    <img
+                      matPrefix
+                      src="assets/images/money_icon.svg"
+                      class="pt-1"
+                    />
+                  </mat-form-field>
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.amount.errors"
+                    >{{ amount_err }}</span
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 pt-4">
+                  <h6>Deposit</h6>
+                  <mat-form-field [floatLabel]="'never'">
+                    <input
+                      matInput
+                      placeholder="Enter Desosite amount"
+                      formControlName="deposite"
+                      autocomplete="off"
+                      readonly
+                    />
+                    <img
+                      matPrefix
+                      src="assets/images/money_icon.svg"
+                      class="pt-1"
+                    />
+                  </mat-form-field>
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.deposite.errors"
+                    >Please enter the deposit amount.</span
+                  >
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="balance_err"
+                    >{{ balance_err }}</span
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="pt-4 col-md-6 booking_date">
+                  <h6>Select Booking Date</h6>
+
+                  <mat-form-field [floatLabel]="'never'">
+                    <input
+                      matInput
+                      [min]="minDate"
+                      [matDatepicker]="picker1"
+                      (dateChange)="getBookingSlots($event)"
+                      (click)="picker1.open()"
+                      placeholder="Date"
+                      formControlName="booking_date"
+                      (keydown)="disableDate()"
+                    />
+                    <div class="">
+                      <mat-datepicker-toggle
+                        matSuffix
+                        [for]="picker1"
+                      ></mat-datepicker-toggle>
+                      <mat-datepicker #picker1></mat-datepicker>
+                    </div>
+                    <!-- <img src="assets/images/calendar-yellow.png" style="height: 20px;"> -->
+                    <!-- <img matPrefix src="assets/images/calendar-yellow.png" style="height: 20px;"> -->
+                    <!-- <img
+                      matSuffix
+                      src="assets/images/down_arrow.svg"
+                      class="pt-1"
+                    /> -->
+                    <!-- #enddocregion toggle -->
+                  </mat-form-field>
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.booking_date.errors"
+                    >Please select the booking date</span
+                  >
+                </div>
+                <div class="pt-4 col-md-6">
+                  <h6>Select Booking Time</h6>
+                  <div class="select_box" id="booking_1_div">
+                    <div class="input-group mb-3">
+                      <div class="input-group-prepend"></div>
+                      <select
+                        class="custom-select"
+                        id="inputGroupSelect01"
+                        aria-placeholder="input"
+                        formControlName="booking_time"
+                      >
+                        <option value="" hidden="">Select Booking Time</option>
+                        <option
+                          *ngFor="let slots of bookingSlots"
+                          [ngStyle]="{
+                            opacity: slots.status == 0 ? '40%' : ''
+                          }"
+                          value="{{ slots.start }}-{{ slots.end }}"
+                          [disabled]="slots.status == 0"
+                          class="t_loction"
+                        >
+                          {{ slots.start }} - {{ slots.end }}
+                        </option>
+                        <option
+                          *ngIf="bookingSlots.length <= 0"
+                          class="t_loction"
+                        >
+                          No slots found
+                        </option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.booking_time.errors"
+                    >The booking time field is required</span
+                  >
+                </div>
+              </div>
+              <button class="save_btn pt-4" type="submit">Next</button>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-5 order-md-2 order-1">
+          <div class="view_box">
+            <div class="view_box_img">
+              <div class="bokimg_img">
+                <img src="{{ bookingData.banner_image }}" />
+              </div>
+              <h3>{{ bookingData.studio_name }}</h3>
+              <p class="my-0">
+                {{ bookingData.street }} {{ bookingData.route }}
+                {{ bookingData.city }}, {{ bookingData.state }}
+                {{ bookingData.zipcode }}
+              </p>
+            </div>
+            <div class="view_box_txt">
+              <h4>
+                {{ bookingData.name
+                }}<span class="float-right">{{ bookingData.price }}</span>
+              </h4>
+              <p>
+                Deposit<span class="float-right">{{
+                  bookingData.deposit
+                }}</span>
+              </p>
+              <p>
+                Duration
+                <span class="float-right">{{ bookingData.duration }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

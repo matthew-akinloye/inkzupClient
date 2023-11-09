@@ -1,0 +1,62 @@
+<div class="auth text-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-11 m-auto">
+        <img src="assets/images/logo.svg" alt="Logo Image" class="cursor"  routerLink="" /><br />
+        <h4 style="color: #fff; margin: 30px 0">
+          Which type of Inkzup account would you like to create ?
+        </h4>
+        <div class="radio">
+          <div class="auth_form text-left mat-card">
+            <div class="account" style="border-bottom: 2px solid #000">
+              <div class="account_check">
+                <mat-checkbox class="example-margin" (click)="becomeInker()">
+                  <div class="row">
+                    <div class="col-md-4 col-lg-3 col-6">
+                      <div class="account_img_box">
+                        <img
+                          src="assets/images/inkzers.svg"
+                          class="img-fluid"
+                        />
+                      </div>
+                    </div>
+                    <div class="col-md-8 col-lg-9 col-12">
+                      <div class="account_text">
+                        <h5>Inkzers- Tattoo Artists Account</h5>
+                      </div>
+                    </div>
+                  </div>
+                </mat-checkbox>
+              </div>
+            </div>
+
+            <div class="account">
+              <div class="account_check">
+                <mat-checkbox class="example-margin" routerLink="/register">
+                  <div class="row">
+                    <div class="col-md-4 col-lg-3 col-6 my-3">
+                      <div class="account_img_box">
+                        <img src="assets/images/inkzup_get.svg" />
+                      </div>
+                    </div>
+                    <div class="col-md-8 col-lg-9 col-12">
+                      <div class="account_text">
+                        <h5>Get Inkzed- Clients Account</h5>
+                        <!-- <p>Subscribe Plan vulputate ut pharetra sit amet aliquam.Etiam sit amet nisl purus in. Faucibus turpis in eu mi bibendum neque egestas.</p> -->
+                      </div>
+                    </div>
+                  </div>
+                </mat-checkbox>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container mt-5">
+      <p class="">
+        Already have an account? <a routerLink="/login"> Log In</a>
+      </p>
+    </div>
+  </div>
+</div>

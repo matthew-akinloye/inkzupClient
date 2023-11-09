@@ -1,0 +1,159 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div id="frame" class="row m-0">
+  <!-- *ngIf="mobile" -->
+  <div id="sidepanel" class="col-md-5 col-lg-3 p-0">
+    <div class="chat_title">
+      <button>
+        <img src="assets/images/back_arrow.svg" (click)="back()" />
+      </button>
+      <span>Message</span>
+    </div>
+    <div id="contacts">
+      <ul>
+        <li class="contact" *ngFor="let msg of messageData"(click)="goDown1()" >
+          <div
+            class="wrap"
+            (click)="getConversation(msg.id, msg.channel_name, msg.receiver_id)"
+          >
+            <div >
+              <img src="{{ msg.profile_img }}" alt="" />
+            </div>
+            <div class="pt-1">
+              <p class="name">
+                {{ msg.name }}
+              </p>
+              <p
+                class="preview"
+                *ngIf="msg.type == 1 && msg.messages != 'null'"
+              >
+                <samp> {{ msg.messages }}</samp>
+                <!-- <b *ngIf="msg.unread > 0">{{ msg.unread }}</b> -->
+              </p>
+              <p class="preview" *ngIf="msg.type == 2">
+                <samp>Image</samp>
+                <!-- <b *ngIf="msg.unread > 0">{{ msg.unread }}</b> -->
+              </p>
+            </div>
+            <div>
+              <span>{{ msg.time }}</span>
+              <b class="unread" *ngIf="msg.unread > 0">{{ msg.unread }}</b>
+              <b class="unread" *ngIf="msg.unread > 0">{{ msg.unread }}</b>
+              <!-- <b class="unread">{{ msg.unread }}</b> -->
+            </div>
+            <!-- <img src="{{ msg.profile_img }}" alt="" /> -->
+            <!-- <div class="meta">
+                            <p class="name">
+                                {{ msg.name }} <span>{{ msg.time }}</span>
+                            </p>
+                            <p class="preview" *ngIf="msg.type == 1 && msg.messages != 'null'">
+                                <samp> {{ msg.messages }}</samp>
+                                <b *ngIf="msg.unread > 0">{{ msg.unread }}</b>
+                            </p>
+                            <p class="preview" *ngIf="msg.type == 2">
+                                <samp>Image</samp>
+                                <b *ngIf="msg.unread > 0">{{ msg.unread }}</b>
+                            </p>
+                        </div> -->
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- default message section -->
+  <div class="msg_default col-md-8" *ngIf="getconversationData.length <= 0">
+    <div class="col-9 m-auto">
+      <img src="assets/images/msg_default.png" class="img-fluid" />
+      <div class="col-md-6 m-auto">
+        <h5>Click on the chat to see full converstaion here</h5>
+      </div>
+    </div>
+  </div>
+  <!--End default message section -->
+
+  <!--message section -->
+  <div
+    class="content col-md-7 col-lg-9 col-12 pr-0"
+    *ngIf="getconversationData.length > 0"
+  >
+  <div style="height: 100%;"   id="targetRed">
+    <div class="contact-profile">
+      <img
+        src="{{ msgUserDetails.profile_img }}"
+        alt=""
+        *ngIf="getconversationData.length > 0"
+      />
+      <p>{{ msgUserDetails.name }}</p>
+    </div>
+    <div
+      class="messages"
+    
+      #scrollMe
+      [scrollTop]="scrollMe.scrollHeight"
+    >
+      <div class="top_div">
+        <div class="bootom_div">
+          <ul class="ul_div">
+            <ng-container *ngFor="let conversation of getconversationData">
+              <li class="sent" *ngIf="user_id != conversation.from_user_id">
+                <span>
+                  <img
+                    src="{{ msgUserDetails.profile_img }}"
+                    alt=""
+                    class="profile_img"
+                  />
+                </span>
+                <p *ngIf="conversation.type == 1">
+                  {{ conversation.messages }}
+                </p>
+                <div class="msgimg_div_sent" *ngIf="conversation.type == 2">
+                  <img class="msgImg" src="{{ conversation.messages }}" />
+                </div>
+              </li>
+              <li
+                class="replies"
+                *ngIf="
+                  user_id == conversation.from_user_id && conversation.type != 0
+                "
+              >
+                <p *ngIf="conversation.type == 1">
+                  {{ conversation.messages }}
+                </p>
+                <div class="msgimg_div" *ngIf="conversation.type == 2">
+                  <img class="msgImg" src="{{ conversation.messages }}" />
+                </div>
+              </li>
+            </ng-container>
+            <div class="imagePreviewd" *ngFor="let url of imagesPreview">
+              <div class="imagePreview">
+                <img [src]="url" />
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="message-input" *ngIf="getconversationData.length > 0">
+      <form name="chatForm" [formGroup]="chatForm" (ngSubmit)="sendMessage()">
+        <div class="wrap">
+          <input
+            formControlName="message"
+            type="text"
+            placeholder="Write your message..."
+          />
+          <input
+            type="file"
+            class="input_file"
+            formControlName="filename"
+            (change)="sendImages($event)"
+            multiple
+            accept="image/*"
+          />
+          <img src="assets/images/attach.svg" class="attach_btn" />
+          <button class="submit"><img src="assets/images/send.svg" /></button>
+        </div>
+      </form>
+    </div>
+    </div>
+  </div>
+</div>

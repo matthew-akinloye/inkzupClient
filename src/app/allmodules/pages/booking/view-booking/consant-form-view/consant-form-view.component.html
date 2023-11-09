@@ -1,0 +1,65 @@
+<div class="view_booking">
+    <form name="consentForm" [formGroup]="consentForm">
+        <div class="container">
+            <button><img src="assets/images/back_arrow.svg" alt=""></button>
+            <span>Consent Form</span>
+            <div class="consent">
+                <h4 class="text-center">Consent to Tattoo Inkzer</h4>
+                <ul>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.when an unknown
+                        printer took a galley of type and scrambled it to make
+                        a type specimen book. </li>
+                    <li>It has survived not only five centuries, but also the leap into electronic typesetting,
+                        remaining essentially unchanged.</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. when an unknown
+                        printer took a galley of type and scrambled it to make
+                        a type specimen book.</li>
+                    <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's
+                        standard dummy text ever since the 1500s</li>
+                    <li>when popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
+                        passages, and more recently.</li>
+                </ul>
+                <div class="consent_form">
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>Date:</p>
+                            <mat-form-field [floatLabel]="'never'" style="background: transparent;">
+                                <mat-label style="color: #FFFFFF;font-weight:200;">DD/MM/YYYY</mat-label>
+                                <input matInput placeholder="Placeholder" formControlName="date" style="color: #fff;">
+                                <img matPrefix src="assets/images/calendar_elite pro.svg" style="width: 27px;
+                                padding-right: 10px;">
+                            </mat-form-field>
+
+                        </div>
+                        <div class="col-md-6">
+                            <p>Your Name:</p>
+                            <mat-form-field [floatLabel]="'never'" appearance="legacy" style="background: transparent;">
+                                <mat-label style="color: #FFFFFF;font-weight:200;">Name</mat-label>
+                                <input matInput placeholder="Placeholder" formControlName="name" style="color: #fff;">
+                                <img matPrefix src="assets/images/user.png" style="width: 27px;
+                                padding-right: 10px;">
+                            </mat-form-field>
+
+                        </div>
+                    </div>
+
+                    <div class="check">
+                        <mat-checkbox class="example-margin" formControlName="term">
+                            <div class="mat-checkbox">
+                                <p class="pl-3 text-style"> I hereby confirm that the shared information is Lorem Ipsum
+                                    is industry.</p>
+                            </div>
+                        </mat-checkbox>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+
+        </div>
+    </form>
+</div>

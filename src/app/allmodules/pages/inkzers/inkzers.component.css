@@ -1,0 +1,587 @@
+#inkzers {
+    padding: 60px 0 0;
+    width: 100%;
+    float: left
+}
+
+.inkzers-content {
+    padding: 50px 0
+}
+
+.inkzers-content p {
+    font-weight: 400;
+    font-size: 20px;
+    margin: 20px 0;
+    color: #434343;
+    font-family: Nunito, sans-serif!important;
+    line-height: 27px;
+    padding-right: 108px
+}
+
+.inkzers-content h3 {
+    color: #000;
+    font-size: 47px;
+    font-weight: 800;
+    line-height: 51śpx;
+    font-family: Nunito, sans-serif!important
+}
+
+.inkzer-bg {
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-size: cover
+}
+
+#portfolio {
+    padding: 60px 0
+}
+
+#tattoo {
+    padding: 80px 0;
+    color: #fff;
+    background: #161616;
+    width: 100%;
+    float: left
+}
+
+#booking {
+    padding: 80px 0;
+    width: 100%;
+    float: left
+}
+
+#review {
+    padding: 80px 0;
+    color: #fff;
+    background-color: #161616;
+    width: 100%;
+    float: left
+}
+
+#review p {
+    font-weight: 200;
+    font-size: 18px;
+    line-height: 28px;
+    margin: 15px 0 15px 0
+}
+
+.review-content {
+    padding: 50px;
+    font-size: 21px;
+    word-spacing: 2px;
+    padding: 20px
+}
+
+.review-content h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fbac18;
+    text-transform: uppercase
+}
+
+.review-content i {
+    font-size: 36px;
+    color: #fbac189e
+}
+
+.tattoo-content {
+    padding: 60px
+}
+
+.tattoo-content h3 {
+    margin: 0 0 10px;
+    font-family: Nunito, sans-serif!important;
+    font-size: 30px;
+    line-height: 40px
+}
+
+.tattoo-content p {
+    font-family: Nunito, sans-serif!important;
+    color: #e0e0e0;
+    font-size: 20px;
+    font-weight: 100;
+    line-height: 25px;
+    word-spacing: 2px;
+    line-height: 30px
+}
+
+#booking p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    padding: 20px 0;
+    color: #434343
+}
+
+.bg-btn {
+    color: #fff;
+    outline: 0;
+    border: none;
+    background-color: #5438ff;
+    font-weight: 500;
+    font-size: 20px;
+    padding: 15px 25px 13px;
+    border-radius: 8px;
+    margin: 12px 0;
+    font-family: Nunito, sans-serif!important;
+    margin-top: 40px;
+    transition: all .3s linear;
+    box-shadow: rgb(0 0 0 / 18%) 0px 1rem 3rem ;
+}
+.bg-btn:hover{
+    transform: translateY(-6px);
+    text-decoration: none;
+}
+button:focus {
+    outline: 0
+}
+
+.work-content p {
+    text-align: center;
+    font-weight: 400;
+    font-size: 19px;
+    word-spacing: 1px;
+    font-size: 16px;
+    padding: 0 50px;
+    line-height: 25px
+}
+
+.Feature {
+    background-color: #f2f2f7;
+    border-radius: 20px;
+    padding: 10px 20px;
+    margin: 20px 0;
+    box-shadow: 2px 0rem 2rem rgb(0 0 0 / 18%);
+    border: 1px solid #00000061;
+    /* border: 1px solid #000; */
+}
+.sub_text{
+    margin: 35px auto 0;
+    line-height: 33px;
+    /* width: 45%; */
+    font-size: 22px;
+    font-weight: 600;
+}
+
+span {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 10px
+}
+
+.Feature p {
+    margin: 10px 0;
+    font-size: 18px;
+    line-height: 25px;
+    padding-left: 11px
+}
+
+#work {
+    padding: 80px 0;
+    width: 100%;
+    float: left;
+    padding-top: 280px
+}
+
+.work-content h3 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 34px
+}
+
+#work img {
+    width: 70%;
+    padding: 20px 0;
+    float: right
+}
+
+#work .bg-btn {
+    display: flex;
+    margin: auto;
+    margin-top: 4%
+}
+
+#booking h1 {
+    font-weight: 700;
+    font-size: 30px;
+    margin: 15px 0 0 0;
+    line-height: 35px;
+    letter-spacing: 0
+}
+
+.booking_image {
+    padding: 40px 0
+}
+
+#tattoo h2 {
+    text-align: center;
+    padding: 10px 80px;
+    font-weight: 700;
+    margin-bottom: 50px;
+    font-size: 30px
+}
+
+.SUBSCRIBE {
+    border-radius: 20px;
+    text-align: center;
+    padding: 15px;
+    background-color: #1e1e1e;
+    background-repeat: no-repeat;
+    color: #fff
+}
+
+#SUBSCRIBE {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 30px 0 50px
+}
+
+#SUBSCRIBE h3 {
+    padding-top: 70px;
+    font-size: 30px;
+    font-weight: 700
+}
+
+#SUBSCRIBE i {
+    font-size: 22px;
+    color: #fbac18;
+    margin: 3px;
+    padding: 0 10px
+}
+
+#SUBSCRIBE p {
+    font-size: 16px;
+    line-height: 25px;
+    color: #434343
+}
+
+.greater {
+    width: 100%;
+    float: left;
+    background-color: #161616;
+    padding: 80px 0;
+    padding-bottom: 120px;
+    position: relative;
+    height: 600px
+}
+
+.greater .content {
+    color: #fff;
+    text-align: center
+}
+
+.greater .content h2 {
+    padding: 10px 60px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 55px
+}
+
+.greater .content p {
+    font-size: 20px;
+    padding: 10px 0;
+    font-weight: 100;
+    width: 70%;
+    margin: auto;
+    word-spacing: 2px;
+    margin-bottom: 20px
+}
+
+.greater img {
+    position: absolute
+}
+
+.submit_btn {
+    background: #5438ff;
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    color: #fff;
+    outline: 0;
+    padding: 15px;
+    font-size: 16px;
+    float: left;
+    margin-top: 5px;
+    margin-bottom: 10px
+}
+
+.plans {
+    width: 100%;
+    background: #1e1e1e;
+    border-radius: 10px;
+    float: left;
+    margin-top: 15px;
+    height: 100%
+}
+
+.plans_bg {
+    background-image: url(../../../../assets/images/plan.svg);
+    background-size: cover;
+    background-position: center;
+    border-top-left-radius: 10px;
+    padding-top: 20px;
+    height: 155px;
+    border-radius: 10px
+}
+
+.plans_bg h4 {
+    color: #fff;
+    font-size: 32px;
+    letter-spacing: 1px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 20px;
+    margin: 2px 0;
+    padding-top: 10px
+}
+
+.plan_text {
+    width: 100%;
+    margin-top: -80px
+}
+
+.plan_text img {
+    width: 40%
+}
+
+.plans_detail {
+    display: flex;
+    margin-bottom: 10px
+}
+
+.plans_detail img {
+    padding: 5px 0;
+    width: 15px
+}
+
+.plan_text button {
+    background: #5438ff;
+    box-shadow: 0 0 100px #000;
+    border: none;
+    color: #fff;
+    width: 80%;
+    margin: 20px 0;
+    padding: 16px;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.para {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 200;
+    padding-top: 1px;
+    padding-left: 15px;
+    text-align: left
+}
+
+#opacity {
+    color: #ffffff7a;
+    text-align: left
+}
+
+.plans_div {
+    width: 280px;
+    justify-content: center;
+    margin: auto;
+    padding: 0 25px;
+    padding-left: 30px
+}
+
+.portfolio_slider {
+    overflow-x: hidden;
+    width: 100%;
+    float: left;
+    background: #f2f2f7;
+    padding: 50px 0
+}
+
+.portfolio_slider h3 {
+    font-weight: 700;
+    font-size: 34px
+}
+
+.portfolio_slider p {
+    font-family: Nunito;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    color: #434343;
+    padding-bottom: 30px;
+    padding-top: 20px;
+
+}
+.Join_{
+    background-color: #FBAC18;
+    transition: all .3s linear;
+    box-shadow: rgb(0 0 0 / 18%) 0px 1rem 3rem;
+}
+.Join_:hover{
+    transform: translateY(-6px);
+}
+#one_img_2 {
+    border-radius: 10px
+}
+
+#one_img_3 {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px
+}
+
+#one_img {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px
+}
+
+.first_img {
+    object-fit: cover;
+    width: 100%;
+    float: left;
+    height: 380px;
+    margin-bottom: 13px
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 3px
+}
+
+.box {
+    display: flex;
+    opacity: 1
+}
+
+.box_2 {
+    flex-basis: 40%;
+    padding: 0 40px;
+    margin-bottom: 20px
+}
+
+.box_1 {
+    margin-bottom: 20px
+}
+
+.box_2 {
+    flex-basis: 50%
+}
+
+.my_text {
+    padding-left: 15px;
+    padding-top: 22px
+}
+
+.main_div {
+    margin: auto;
+    display: flex
+}
+
+@media screen and (max-width:425px) {
+    #work {
+        padding: 90px 0 50px 0
+    }
+    .step_2 {
+        width: 90%!important
+    }
+}
+
+@media screen and (max-width:768px) {
+    .plan_text button {
+        position: inherit!important
+    }
+    .review-content,
+    .tattoo-content {
+        padding: 60px 15px 0
+    }
+    .tattoo-content h3 {
+        font-size: 25px
+    }
+    .portfolio_slider h3 {
+        font-size: 24px
+    }
+    .greater .content h2 {
+        font-size: 30px;
+        line-height: 42px;
+        padding: 10px
+    }
+    .greater .content p {
+        width: 100%
+    }
+    .greater {
+        height: auto
+    }
+    .greater img {
+        left: 0
+    }
+    #work img {
+        width: 100%;
+        float: left
+    }
+    .inkzers-content p {
+        text-align: center;
+        color: #000;
+        font-size: 16px;
+        padding: 0 25px;
+        margin: 0;
+        font-weight: 600
+    }
+    .inkzers-content h3 {
+        text-align: center;
+        font-size: 28px
+    }
+    #tattoo h2 {
+        font-size: 22px;
+        padding: 20px
+    }
+    #inkzers {
+        padding: 0
+    }
+    .step_4 {
+        width: 20%
+    }
+    #inkzers {
+        padding: 30px 0 20px 0
+    }
+    .inkzer_content2 {
+        width: 100%;
+        float: left;
+        padding-top: 70px
+    }
+    .main_div {
+        padding: 0
+    }
+    .bg-btn {
+        display: flex;
+        justify-content: center;
+        margin: 16px auto 0
+    }
+    .p_text {
+        padding: 25px 0
+    }
+    .inkzer-bg {
+        display: none
+    }
+    .inkzers-content {
+        background-image: linear-gradient(rgb(255 255 255 / 16%), rgb(255 255 255 / 30%)), url(../../../../assets/images/banner.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: top;
+        padding: 50px 0 30px 0
+    }
+    .sub_text{
+        margin: 30px auto 0;
+        line-height: 28px;
+        /* width: 85%; */
+        font-size: 18px;
+        font-weight: 600;
+    }
+}
+
+@media screen and (max-width:992px) {
+    .box {
+        flex-direction: column
+    }
+}

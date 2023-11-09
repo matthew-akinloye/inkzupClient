@@ -1,0 +1,114 @@
+.add-card {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 0;
+}
+.add-card button {
+  background: none;
+  border: none;
+  outline: none;
+}
+.add-card button img {
+  width: 15px;
+}
+.errSpan {
+  font-size: 16px !important;
+  line-height: 0px !important;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+form img {
+  padding-right: 10px;
+}
+.add-card span {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 55px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+.add-card p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  color: #e0e0e0;
+}
+.mat-form-field {
+  width: 100%;
+  background: #000;
+  border-radius: 10px;
+  padding: 0px 20px;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-underline {
+  display: none;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #848282 !important;
+}
+.mat-form-field .mat-focused .mat-form-field-label {
+  color: #848282;
+}
+.cancel-btn {
+  border-radius: 5px;
+  padding: 8px 30px;
+  color: #5438ff;
+  background-color: transparent;
+  font-weight: bold;
+  outline: none;
+  border: 1px solid #5438ff !important;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 20px 10px 0px 0;
+  /* margin: px 10px 10px 0; */
+}
+.edit-btn {
+  border-radius: 5px;
+  padding: 10px 40px;
+  color: #ffff;
+  background-color: #5438ff !important;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 20px 10px 0 0;
+  float: right;
+}
+.form-bottom-btn {
+  display: flex;
+  float: right;
+}
+.card_box {
+  width: 100%;
+  float: left;
+  background: #161616;
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+.card_box h6 {
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 0;
+}
+@media (max-width: 380px) {
+  .cancel-btn {
+    width: 100%;
+  }
+  .edit-btn {
+    width: 100%;
+    float: left;
+  }
+}
+
+.mat-form-field-underline {
+  display: none !important;
+}

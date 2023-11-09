@@ -1,0 +1,114 @@
+.booking {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 0;
+}
+
+.booking button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.booking button img {
+  width: 11px;
+}
+
+.booking span {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 55px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.save-box {
+  background: #161616;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 100%;
+  float: left;
+  padding: 20px;
+  margin: 10px 0;
+}
+
+.save_box_img {
+  position: relative;
+}
+
+.save_box_img img {
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+  height: 140px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.plan_icon {
+  position: absolute;
+  top: 5px;
+  width: 30px !important;
+  right: 5px;
+  height: auto !important;
+}
+
+.save_profile {
+  z-index: 9;
+  position: relative;
+}
+
+.profile_img {
+  width: 100px;
+  border-radius: 50%;
+  margin-top: -55px;
+  height: 100px;
+}
+
+.save_profile h4 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 0;
+  color: #ffffff;
+  margin: 20px 0 10px;
+}
+
+.save_profile p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+samp {
+  font-family: "Nunito", sans-serif !important;
+  font-style: normal;
+  line-height: 40px;
+}
+
+.save_profile button {
+  background: #5438ff;
+  border-radius: 10px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.save_inkzer {
+  width: 100%;
+  float: left;
+  padding-top: 30px;
+}

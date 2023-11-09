@@ -1,0 +1,47 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="inkzer_details">
+  <div class="inkzer_banner">
+    <!-- <img src="assets/images/service_banner_image.png" /> -->
+    <img src="{{ banner_img }}" />
+  </div>
+  <div class="position_div">
+    <div class="container">
+      <div class="width_70">
+        <h2>Services</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="about">
+  <div class="container">
+    <div class="service_tab">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let service of serviceList">
+          <div class="service_box">
+            <img src="{{ service.service_img }}" />
+            <h4>{{ service.name }}</h4>
+            <h6>
+              {{ service.duration }}
+              <span class="float-right">${{ service.price }}</span>
+            </h6>
+            <button (click)="bookService(service.user_uuid, service.id)">
+              Book Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="text-center" *ngIf="serviceList.length == 0">
+      <p style="color: #fff">No Data Found</p>
+    </div>
+    <div class="">
+      <div class="float-right pr-5" *ngIf="collectionSize != 0">
+        <pagination-controls
+          (pageChange)="p = $event"
+          previousLabel=""
+          nextLabel=""
+        ></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>

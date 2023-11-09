@@ -1,0 +1,137 @@
+<app-loader *ngIf="isLoad"></app-loader>
+<div class="auth">
+  <div class="container">
+    <div class="text-center">
+      <img class="cursor-pointer" routerLink="" src="assets/images/logo.svg" alt="Logo Image" class="pointer" />
+  </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="auth_form">
+          <h3>
+            Welcome Back <br />
+            Inkzup Customer!
+          </h3>
+          <span class="text-danger errSpan float-left" *ngIf="form_Err">
+            {{ form_Err }}</span
+          >
+          <form
+            name="loginForm"
+            [formGroup]="loginForm"
+            (ngSubmit)="artistLogin()"
+          >
+            <div class="mb-4">
+              <h6>Phone Number*</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input maxlength="14" matInput placeholder="Phone Number" formControlName="phone" autocomplete="off"
+                  (keyup)="
+                    phoneFormat($event, $event.keyCode == 8 ? true : false)
+                  " />
+                <img matPrefix src="assets/images/phone.png" />
+              </mat-form-field>
+              <span class="text-danger float-left errSpan" *ngIf="phone_Err">
+                {{ phone_Err }}
+              </span>
+            </div>
+
+            <!-- <div class="mb-4" id="email_top">
+              <h6>Email</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input
+                  matInput
+                  id="emailname"
+                  placeholder="Email"
+                  formControlName="email"
+                  type="email"
+                  autocomplete="off"
+                  [attr.readonly]="isReadOnly"
+                  (click)="test()"
+                />
+                <img matPrefix src="assets/images/email.png" class="mt-1" />
+              </mat-form-field>
+              <span class="text-danger errSpan" *ngIf="email_Err">
+                {{ email_Err }}</span
+              > 
+            </div>
+            <div class="password">
+              <h6>Password</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input
+                  matInput
+                  [type]="hide ? 'password' : 'text'"
+                  placeholder="Password"
+                  formControlName="password"
+                  [attr.readonly]="isReadOnly1"
+                  onfocus="this.removeAttribute('readonly');"
+                />
+                <button
+                  type="button"
+                  mat-icon-button
+                  matSuffix
+                  (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'"
+                  [attr.aria-pressed]="hide"
+                >
+                  <mat-icon style="color: #ffac00"
+                    >{{ hide ? "visibility_off" : "visibility" }}
+                  </mat-icon>
+                </button>
+                <img
+                  matPrefix
+                  src="assets/images/password.png"
+                  class="paswrd_img"
+                />
+              </mat-form-field>
+              <span class="text-danger errSpan" *ngIf="password_err">
+                {{ password_err }}</span
+              >
+            </div> -->
+            <!-- <div>
+              <div class="bottom_btn d-flex pt-1">
+                <div class="input-group text-left" (click)="checkRemeber()">
+                  <mat-icon *ngIf="RememberMeCheck"> check_box </mat-icon>
+                  <mat-icon *ngIf="!RememberMeCheck">
+                    check_box_outline_blank </mat-icon
+                  >Remember me
+                </div>
+                <h6 class="float-right">
+                  <a type="" routerLink="/forgot-password">Forgot Password?</a>
+                </h6>
+              </div>
+            </div> -->
+            <button type="submit" class="submit_btn">Login</button>
+          </form>
+          <!-- <div class="or text-center">------------ OR ------------</div> -->
+        <!--  <button
+            type="button"
+            (click)="signinWithGoogle()"
+            mat-stroked-button
+            class="google_btn"
+          >
+            <img src="assets/images/google.png" /> Continue With Goggle
+          </button> -->
+          <!-- <button
+            type="button"
+            (click)="signinWithFacebook()"
+            mat-stroked-button
+            class="google_btn"
+       style="width:450px;"   >
+            <img src="assets/images/facebook.png" style="width: 15px" /> Continue With Facebook
+          </button>
+          <span class="text-danger float-left errSpan" *ngIf="SocialEmailErr">
+            {{ SocialEmailErr }}</span
+          > -->
+          <p class="mt-5">
+            Not registered yet?
+            <a target="_blank" routerLink="/account">Create An Account</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <div class="auth_img">
+          <img src="assets/images/auth.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

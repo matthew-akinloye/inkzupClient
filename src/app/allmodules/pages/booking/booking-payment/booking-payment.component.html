@@ -1,0 +1,200 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="view_booking">
+  <div class="container">
+    <div class="view_field">
+      <button>
+        <img src="assets/images/back_arrow.svg" alt="" (click)="back()" />
+        <span>Payment Method</span>
+      </button>
+     
+      <div class="row">
+        <div class="col-md-7 order-2" *ngIf="subscription_plan == 2">
+        
+          <span class="text-danger float-left errSpan" *ngIf="paymentErr"
+            >{{ paymentErr }}.</span
+          >
+          <div class="view_profile_booking" *ngIf="paymethod != ''">
+            <p class="mt-0" *ngIf="paymethod == ''">
+              Fill out the information to share your tattoo idea with the
+              inkzer.
+            </p>
+            <div class="row">
+              <div class="col-xl-8 col-lg-10 p-0">
+                <!-- <h3 class="h3">Added Card</h3> -->
+                <div class="pay_card">
+                  <img src="assets/images/credit_card.svg" />
+                  <div class="card_img">
+                    <img src="assets/images/visa.svg" />
+                    <h1>* * * * * * * * * * * * {{ paymethod.last4 }}</h1>
+                    <h3>Card holder <span>Expire date</span></h3>
+                    <p>
+                      {{ paymethod.name }}
+                      <span
+                        >{{ paymethod.exp_month }}/{{
+                          paymethod.exp_year
+                        }}</span
+                      >
+                    </p>
+                  </div>
+                </div>
+                <button
+                  class="save_btn pt-4"
+                  (click)="addBooking(paymethod.id)"
+                >
+                  Pay {{ deposite }}
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="add_card" *ngIf="paymethod == ''">
+            <!-- <span class="text-danger errSpan float-left" *ngIf="paymentErr "> {{paymentErr }}</span> -->
+            <form
+              name="AddBookingDetailsForm"
+              [formGroup]="addPaymentForm"
+              (ngSubmit)="addBookingPayment()"
+            >
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Card holder full name</h6>
+                  <mat-form-field [floatLabel]="'never'" class="mb-3">
+                    <input
+                      matInput
+                      placeholder="Card holder full name"
+                      formControlName="name"
+                    />
+                  </mat-form-field>
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.name.errors"
+                    >The card holder full name is required.</span
+                  >
+                </div>
+                <div class="col-md-6">
+                  <h6>Card number</h6>
+                  <mat-form-field [floatLabel]="'never'" class="mb-3">
+                    <input
+                      (keyup)="CardFormet($event)"
+                      autocomplete="off"
+                      matInput
+                      placeholder="Card Number"
+                      formControlName="number"
+                      maxlength="16"
+                    />
+                  </mat-form-field>
+
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.number.errors?.required"
+                    >The Card number is required.</span
+                  >
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.number.errors?.minlength"
+                    >The Card number must be of 16 digits.</span
+                  >
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <h6>Expiration Date</h6>
+                  <mat-form-field [floatLabel]="'never'" class="mb-3">
+                    <input
+                      placeholder="MM/YY"
+                      autocomplete="off"
+                      (keyup)="expDateValidators($event)"
+                      maxlength="5"
+                      matInput
+                      maxlength="5"
+                      formControlName="expiryDate"
+                    />
+                  </mat-form-field>
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.expiryDate.errors"
+                    >Please enter valid Expiration date.</span
+                  >
+                </div>
+                <div class="col-md-6">
+                  <h6>CVV</h6>
+                  <mat-form-field [floatLabel]="'never'" class="mb-3">
+                    <input
+                      matInput
+                      placeholder="CVV"
+                      autocomplete="off"
+                      type="number"
+                      formControlName="cvv"
+                      maxlength="3"
+                      type="number"
+                      onKeyPress="if(this.value.length==3) return false"
+                      (keyup)="cvvFormat($event)"
+                    />
+                  </mat-form-field>
+                  <span
+                    class="text-danger float-left errSpan"
+                    *ngIf="submitted && f.cvv.errors"
+                    >The cvv field is required.</span
+                  >
+                </div>
+              </div>
+              <div class="form-bottom-btn">
+                <p>
+                  <button type="button" class="cancel-btn">Cancel</button>
+                  <button class="edit-btn mr-4">Pay</button>
+                </p>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-md-7" *ngIf="subscription_plan == 1">
+          <div class="view_profile_booking" *ngIf="paymethod != ''">
+            <button>
+              <img src="assets/images/back_arrow.svg" alt="" (click)="back()" />
+            </button>
+            <span>Payment Method</span>
+            <button class="save_btn pt-4" (click)="payByCash()">
+              Pay By Cash
+            </button>
+          </div>
+        </div>
+        <div class="col-md-5 order-md-2 order-1">
+          <div class="view_box">
+            <div class="view_box_img">
+              <div class="bokimg_img">
+                <img src="{{ bookingData.banner_image }}" />
+              </div>
+              <h3>{{ bookingData.studio_name }}</h3>
+              <p class="my-0">
+                {{ bookingData.street }} {{ bookingData.route }}
+                {{ bookingData.city }}, {{ bookingData.state }}
+                {{ bookingData.zipcode }}
+              </p>
+            </div>
+            <div class="view_box_txt">
+              <h4>
+                {{ bookingData.service_name }}
+                <span class="float-right">${{ bookingData.price }}</span>
+              </h4>
+              <p>
+                Duration
+                <span class="float-right">{{ bookingData.duration }}</span>
+              </p>
+              <p>
+                Date
+                <span class="float-right">{{ bookingData.booking_date }}</span>
+              </p>
+              <p>
+                Time <span class="float-right">{{ time }}</span>
+              </p>
+              <p>
+                Deposit
+                <span class="float-right">{{
+                  deposite == "" ? 0 : deposite
+                }}</span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

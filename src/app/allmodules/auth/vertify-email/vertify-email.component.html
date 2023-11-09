@@ -1,0 +1,27 @@
+<app-auth-loader *ngIf="isLoad"> </app-auth-loader>
+<div class="auth text-center">
+  <div class="container">
+    <img src="assets/images/logo.svg" alt="Logo Image" width="90" />
+
+    <div class="working_dialog">
+      <div class="working_txt">
+        <h4>VERIFY YOUR EMAIL</h4>
+        <img src="assets/images/verify.png" />
+        <form name="emailVerifyForm">
+          <div class="mb-3">
+            <h6 class="text-left">Email</h6>
+            <mat-form-field [floatLabel]="'never'">
+              <input matInput placeholder="Email" [value]="email" readonly />
+              <img matPrefix src="assets/images/mail.svg" />
+            </mat-form-field>
+          </div>
+          <button type="button" (click)="SendVerifyEmail()">
+            Send Email Verification
+          </button>
+        </form>
+        <!-- <button (click)="SendVerifyEmail()">Sent Mail</button> -->
+        <a routerLink="/phone-verify">Send Text Verification</a>
+      </div>
+    </div>
+  </div>
+</div>

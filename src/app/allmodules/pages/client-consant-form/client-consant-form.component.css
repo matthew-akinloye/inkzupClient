@@ -1,0 +1,157 @@
+.view_booking {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 0;
+}
+
+.view_booking button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.view_booking button img {
+  width: 11px;
+}
+
+.errSpan {
+  font-size: 16px !important;
+  line-height: 0px !important;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.mat-form-field-underline {
+  bottom: 0 !important;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-underline {
+  bottom: 0 !important;
+}
+
+.view_booking span {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 55px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.save_btn {
+  background: #5438ff !important;
+  color: #fff;
+  border: 1px solid #5438ff !important;
+  border-radius: 8px;
+  font-size: 20px;
+  font-weight: bold;
+  float: left;
+  padding: 14px 44px 10px 44px;
+}
+
+.consent {
+  width: 100%;
+  float: left;
+  background: #161616;
+  border-radius: 10px;
+  margin: 20px 0;
+  padding: 30px 65px;
+}
+
+.consent h4 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 41px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.consent ul li {
+  list-style-type: disc;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+  padding: 10px;
+  /* margin: 0 20px; */
+}
+
+.consent ul li::marker {
+  font-size: 25px;
+  color: #fbac18;
+}
+
+.check {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+}
+
+.consent_form p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 27px;
+  color: #ffffff;
+  float: left;
+  margin-top: 0;
+  padding-top: 20px;
+}
+
+.consent_form {
+  width: 100%;
+  float: left;
+  padding-top: 30px;
+}
+
+
+/* .consent_form .mat-form-field {
+background: transparent;
+margin-top: -20px;
+margin-left: 10px;
+border-bottom: 2px solid;
+} */
+
+.example-margin {
+  /* margin: 9px 16px 8px 0px; */
+}
+
+p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+  padding: 10px;
+  margin-bottom: 0;
+}
+
+.signature {
+  font-weight: 400 !important;
+  font-size: 20px !important;
+}
+
+@media screen and (max-width:600px) {
+  .consent {
+      padding: 30px;
+  }
+  .consent ul li::marker {
+      font-size: 20px;
+  }
+  .consent ul li {
+      font-size: 13px;
+  }
+}

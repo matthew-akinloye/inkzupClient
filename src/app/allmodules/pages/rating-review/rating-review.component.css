@@ -1,0 +1,81 @@
+.rating {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 0;
+}
+.rating span {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 55px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  vertical-align: middle;
+}
+.mat-form-field {
+  width: 100%;
+  background: #282828;
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-bottom: 5px;
+  color: #fff;
+}
+.rating p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 27px;
+  color: #e0e0e0;
+  padding-top: 15px;
+}
+.rating h6 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 27px;
+  color: #ffffff;
+  padding-top: 40px;
+}
+.star {
+  width: 60px;
+  padding: 10px;
+}
+::ng-deep .mat-form-field.mat-focused .mat-form-field-underline {
+  display: none;
+}
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #848282 !important;
+}
+.mat-form-field .mat-focused .mat-form-field-label {
+  color: #848282;
+}
+.cancel_btn {
+  color: #5438ff;
+  border: 1px solid #5438ff;
+  background: transparent;
+  padding: 10px 30px;
+  /* width: 100px; */
+  margin-right: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+.save_btn {
+  background: #5438ff;
+  color: #fff;
+  border: 1px solid #5438ff;
+  padding: 10px 30px;
+  /* width: 100px; */
+  margin-right: 10px;
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.mat-button.mat-accent,
+.mat-icon-button.mat-accent,
+.mat-stroked-button.mat-accent {
+  color: #ffd740 !important;
+}

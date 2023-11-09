@@ -1,0 +1,168 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="view_booking">
+  <div class="container">
+    <button>
+      <img src="assets/images/back_arrow.svg" alt="" (click)="back()" />
+    </button>
+    <span>View Booking</span>
+    <div class="view_field">
+      <div class="row">
+        <div class="col-lg-7 col-md-12">
+          <p
+            class="review"
+            *ngIf="bookingData.status == 1 && bookingData.review == 0"
+          >
+            <a routerLink="/pages/rating-review/{{ bookingData.uuid }}"
+              >Add Ratings and Review</a
+            >
+          </p>
+          <div class="view_profile_booking">
+            <div class="status_bar">
+              <p *ngIf="bookingData.status == 5">
+                Your booking has been rescheduled
+              </p>
+              <p *ngIf="bookingData.status == 4">
+                Your booking has been cancelled
+              </p>
+              <p *ngIf="bookingData.status == 3">
+                Your booking request is pending
+              </p>
+              <p *ngIf="bookingData.status == 2">
+                Your booking has been accepted
+              </p>
+              <p *ngIf="bookingData.status == 1">
+                Your booking has been completed
+              </p>
+            </div>
+
+            <div class="details">
+              <div class="row">
+                <div class="col-md-6">
+                  <h2 class="m-0">{{ bookingData.name }}</h2>
+                </div>
+                <div class="col-md-6">
+                  <p class="dates my-0">
+                    <img src="assets/images/calendar-yellow.png" />
+                    <samp> {{ bookingData.date }}</samp>
+                  </p>
+                </div>
+                <div class="col-12">
+                  <p class="description">{{ bookingData.description }}.</p>
+                </div>
+              </div>
+
+              <div class="box_detail">
+                <div class="row">
+                  <div class="col-md-3 col-6 mx-auto col-lg-3">
+                    <h6>Color</h6>
+                    <p>{{ bookingData.color }}</p>
+                  </div>
+                  <div class="col-md-3 col-6 mx-auto col-lg-3" id="border_left">
+                    <div class="">
+                      <h6>Duration</h6>
+                      <p>{{ bookingData.duration }}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-6 mx-auto col-lg-3" id="border_left">
+                    <div class="">
+                      <h6>Start Time</h6>
+                      <p>{{ bookingData.slot_start }}</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-6 mx-auto col-lg-3" id="border_left">
+                    <div class="">
+                      <h6>Size</h6>
+                      <p>{{ bookingData.size }}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="consent_form" *ngIf="bookingData.constant_form">
+                <h4>Consent form</h4>
+                <mat-icon> fiber_manual_record </mat-icon>
+                <p>
+                  In consideration of receiving a tattoo from.
+                  <a
+                    style="cursor: pointer"
+                    routerLink="/pages/consant-form-details/{{
+                      bookingData.uuid
+                    }}"
+                    >Read More</a
+                  >
+                </p>
+              </div>
+              <h4 class="pt-5 float-left">Reference Images</h4>
+              <div class="row pt-3">
+                <div class="col-md-3" *ngFor="let img of refrenceImages">
+                  <div class="ref_img">
+                    <img src="{{ img }}" />
+                  </div>
+                </div>
+                <div
+                  class="col-lg-3 col-md-5"
+                  *ngIf="refrenceImages.length == 0"
+                >
+                  <p>No Image found</p>
+                </div>
+              </div>
+              <div
+                *ngIf="bookingData.status != 4 && bookingData.cancelStatus == 1"
+              >
+                <span>Do you need to cancel your booking?</span>
+                <select
+                  class="custom-select"
+                  id="inputGroupSelect01"
+                  aria-placeholder="input"
+                  (change)="bookingStatus($event)"
+                >
+                  <option value="" hidden>Select</option>
+                  <option class="t_loction" value="1">Yes</option>
+                  <!-- <option class="t_loction" value="2">Rescheduled</option> -->
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-5 col-md-8 mx-auto">
+          <div class="my-4">
+            <div class="view_box">
+              <div class="view_box_img">
+                <!-- <img src="assets/images/man-doing-tattoo-tattoo-salon 2.png"> -->
+                <div class="bokimg_img">
+                  <img src="{{ bookingData.banner_image }}" />
+                </div>
+                <h3>{{ bookingData.studio_name }}</h3>
+                <h6>{{ bookingData.artist_name }}</h6>
+                <p class="mb-0">{{ bookingData.address }}</p>
+              </div>
+              <div class="view_box_txt">
+                <h4>
+                  Total Amount<span class="float-right"
+                    >${{ bookingData.price | number }}</span
+                  >
+                </h4>
+                <p>
+                  Deposit
+                  <span class="float-right"
+                    >${{
+                      bookingData.deposite == null
+                        ? 0
+                        : (bookingData.deposite | number)
+                    }}</span
+                  >
+                </p>
+                <p>
+                  Remaining
+                  <span class="float-right"
+                    >${{ bookingData.balance | number }}</span
+                  >
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

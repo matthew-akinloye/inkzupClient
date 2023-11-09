@@ -1,0 +1,497 @@
+.profile {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 0;
+}
+
+.pay_vard {
+  width: 100%;
+  float: left;
+}
+
+.errSpan {
+  font-size: 16px !important;
+  line-height: 0px !important;
+  padding-bottom: 25px;
+  padding-top: 10px;
+}
+
+.profile button {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.profile button img {
+  width: 11px;
+}
+
+.profile span {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 55px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  vertical-align: middle;
+  padding-left: 10px;
+}
+
+.form img {
+  width: 30px;
+  padding-right: 10px;
+}
+
+.mat-form-field {
+  width: 100%;
+  background: #000;
+  border-radius: 10px;
+  padding: 0 20px;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+  height: 60px;
+}
+
+.edit_ptofile form h6 {
+  color: #fff;
+  padding: 20px 0;
+  font-size: 16px;
+}
+
+.edit_ptofile form img {
+  vertical-align: bottom;
+  width: 25px;
+  padding-right: 5px;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-underline {
+  display: none;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #848282 !important;
+}
+
+.mat-form-field .mat-focused .mat-form-field-label {
+  color: #848282;
+}
+
+.save_changes_btn {
+  background: #5438ff !important;
+  border-radius: 8px;
+  font-family: Nunito;
+  font-style: normal;
+  width: 100%;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+  padding: 15px 30px;
+  margin-top: 14px;
+  font-weight: bold;
+}
+
+.card_img button {
+  text-align: right;
+  float: right;
+  color: #fff;
+}
+
+.profile-img {
+  width: 80px;
+  height: 80px;
+  background: #ffac00;
+  border: 2px solid #ffac00;
+  border-radius: 50%;
+  text-align: center;
+  margin: 0 auto;
+  float: left;
+  box-shadow: 0 -1px 5px 7px rgb(255 172 0 / 20%);
+  margin-bottom: 25px;
+}
+
+.profile-img span {
+  font-size: 60px;
+}
+
+.profile-img .file {
+  position: relative;
+  overflow: hidden;
+  margin-top: -25%;
+  width: 30px;
+  height: 30px;
+  border: none;
+  padding: 0;
+  border-radius: 50%;
+  font-size: 15px;
+  background: #5438ff;
+  float: right;
+}
+
+.profile-img .file img {
+  margin-top: 7px;
+  margin-left: 8px !important;
+  float: left;
+  text-align: center;
+  width: 20px;
+}
+
+.profile-img .file input {
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  top: 0;
+}
+
+.profile_section {
+  width: 100%;
+  float: left;
+  padding-top: 50px;
+}
+
+.edit_ptofile {
+  background: #161616;
+  border-radius: 10px;
+  padding: 30px 0;
+  width: 100%;
+  float: left;
+  margin-bottom: 20px;
+}
+
+.edit_ptofile h4 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  padding-bottom: 20px;
+}
+
+.edit_ptofile form {
+  /* float: left; content not comping properly in TABLET view */
+  padding: 20px;
+  border-bottom: 2px solid #000;
+}
+
+.logout_btn {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #fbac18;
+  float: left;
+  width: 100%;
+}
+
+.payment {
+  width: 100%;
+  float: left;
+}
+
+.payment h1 {
+  font-size: 20px;
+}
+
+.pay_card {
+  position: relative;
+  margin-top: 15px;
+}
+
+.pay_card img {
+  width: 100%;
+  position: relative;
+}
+
+.card_img {
+  width: 87%;
+  float: left;
+  position: absolute;
+  top: 15%;
+  left: 5%;
+  right: 40px;
+  padding: 10px 25px;
+}
+
+.card_img img {
+  width: 100px;
+  padding-bottom: 20px;
+}
+
+.payment .card_img h1 {
+  color: #ffffff;
+  font-size: 32px;
+  padding: 0 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.card_img h3 {
+  color: #ffffff;
+  font-size: 16px;
+  padding: 30px 10px 10px;
+  width: 100%;
+  float: left;
+}
+
+.card_img h3 span {
+  float: right;
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 600;
+}
+
+.card_img p {
+  padding: 0 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.card_img p span {
+  padding: 0 10px;
+  font-size: 14px;
+  color: #fff;
+  float: right;
+  line-height: 20px;
+  font-weight: 400;
+}
+
+.payment {
+  background: #161616;
+  border-radius: 10px;
+  width: 100%;
+  float: left;
+  padding: 20px 10px;
+}
+
+.payment h1 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  width: 100%;
+  float: left;
+  padding-top: 10px;
+  margin-bottom: 0;
+}
+
+.add_card_btn {
+  background: #5438ff !important;
+  border-radius: 14px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+  color: #ffffff;
+  padding: 15px 30px;
+}
+
+.password {
+  background: #161616;
+  border-radius: 10px;
+  width: 100%;
+  float: left;
+  padding: 20px 30px;
+  margin: 30px 0;
+}
+
+.cancel-btn {
+  border-radius: 5px;
+  padding: 8px 30px;
+  color: #5438ff;
+  background-color: transparent;
+  font-weight: bold;
+  outline: none;
+  border: 1px solid #5438ff !important;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 20px 10px 0px 0;
+}
+
+.edit-btn {
+  border-radius: 5px;
+  padding: 10px 40px;
+  color: #ffff;
+  background-color: #5438ff !important;
+  font-weight: bold;
+  outline: none;
+  border: none;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 20px 10px 0 0;
+  float: right;
+}
+
+.form-bottom-btn {
+  display: flex;
+  float: right;
+}
+
+.password h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 33px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  padding-bottom: 0px;
+}
+
+.password h6 {
+  color: #fff;
+  padding: 10px 0;
+  font-size: 16px;
+}
+
+.review_section {
+  background: #161616;
+  border-radius: 10px;
+  width: 100%;
+  float: left;
+  padding: 20px 30px;
+}
+
+.review_section h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 33px;
+  letter-spacing: 0.2px;
+  color: #ffffff;
+  padding-bottom: 10px;
+}
+
+.review {
+  width: 100%;
+  float: left;
+  padding: 20px 0;
+  border-bottom: 4px solid #161616;
+}
+
+.review_rateing {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.review_rateing img {
+  width: 80px;
+  border-radius: 50%;
+}
+
+.review_text {
+  /* position: absolute;
+width: 88%;
+top: 0;
+left: 100px; */
+}
+
+.review_text h4 {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 27px;
+  color: #ffffff;
+  line-height: 20px;
+  width: 100%;
+  float: left;
+}
+
+.review_text h4 span {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 200;
+  line-height: 30px;
+}
+
+.review_text p {
+  font-size: 16px;
+  line-height: 22px;
+  color: #e0e0e0;
+  margin-bottom: 5px;
+}
+
+.rate_img img {
+  width: 20px;
+}
+
+.review p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 22px;
+  color: #e0e0e0;
+}
+
+@media (max-width: 425px) {
+  .cancel-btn {
+    width: 100%;
+  }
+  .edit-btn {
+    width: 100%;
+    float: left;
+  }
+  .card_img h3,
+  .card_img p {
+    padding: 0;
+    font-size: 14;
+  }
+  .payment .card_img h1 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 425px) {
+  .card_img {
+    top: 15px;
+  }
+  .card_img img {
+    width: 75px;
+    padding-bottom: 10px;
+  }
+  .card_img {
+    padding: 10px 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .payment .card_img h1 {
+    font-size: 23px;
+  }
+  .card_img {
+    padding: 10px;
+  }
+  .card_img h3 {
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .payment .card_img h1 {
+    font-size: 16px;
+  }
+  .card_img img {
+    padding-bottom: 0;
+  }
+}
+
+@media screen and (max-width: 355px) {
+  .card_img {
+    top: 1px;
+  }
+  .card_img p span {
+    line-height: 0;
+  }
+}
+
+.stars-line {
+  justify-content: left !important;
+}

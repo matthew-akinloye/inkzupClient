@@ -1,0 +1,70 @@
+<div class="view_booking">
+    <div class="container">
+        <div class="view_field">
+            <div class="row">
+                <div class="col-md-7">
+                        <div class="view_profile_booking">
+                            <button><img src="assets/images/back_arrow.svg" alt=""></button> 
+                            <span>Payment Method</span>
+                            <p>Fill out the information to share your tattoo idea with the inkzer.</p>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12 pt-4">
+                                        <h6>Card holder full name</h6>
+                                        <mat-form-field [floatLabel]="'never'">
+                                            <input matInput placeholder="Card holder full name">
+                                            <img matPrefix src="assets/images/person_icon.svg">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 pt-4">
+                                        <h6>Card number</h6>
+                                        <mat-form-field [floatLabel]="'never'">
+                                            <input matInput placeholder="Card number">
+                                            <img matPrefix src="assets/images/card.svg">
+                                        </mat-form-field>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="pt-4 col-md-6">
+                                        <h6>Expiry date</h6>
+                                        <mat-form-field [floatLabel]="'never'">
+                                            <input matInput placeholder="Expiry date">
+                                            <img matPrefix src="assets/images/clock.png">
+                                        </mat-form-field>
+                                       </div>
+                                       <div class="pt-4 col-md-6">
+                                        <h6>CVV</h6>
+                                        <mat-form-field [floatLabel]="'never'">
+                                            <input matInput placeholder="CVV">
+                                            <img matPrefix src="assets/images/card.svg">
+                                        </mat-form-field>
+                                       </div>
+                                </div>
+                                <button class="save_btn pt-4" routerLink="/pages/booking-card-add">Add Card</button>
+                            </form>
+                        </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="view_box">
+                        <div class="view_box_img">
+                            <img src="assets/images/man-doing-tattoo-tattoo-salon 2.png">
+                            <h3>Salty Locks Hair Studio</h3>
+                            <h6>Cherry Lion</h6>
+                            <p>29 Webber Street, London (South Bank), SE1 8QW,
+                             England, Down the side of the Old Vic theatre.</p>
+                        </div>
+                        <div class="view_box_txt">
+                            <h4>Full Hand Tattoo<span class="float-right">$40.25</span></h4>
+                            <p>Duration <span class="float-right">1 h 20 min</span></p>
+                            <p>Date <span class="float-right">23 Mar 2021</span></p>
+                            <p>Time <span class="float-right">04: 00 PM</span></p>
+                            <p>Deposit <span class="float-right">$20</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

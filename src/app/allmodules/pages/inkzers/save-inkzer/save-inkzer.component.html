@@ -1,0 +1,54 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="booking">
+  <div class="container">
+    <button>
+      <img src="assets/images/back_arrow.svg" alt="" (click)="back()" />
+    </button>
+    <span>Favorite Inkzers</span>
+    <div class="save_inkzer">
+      <div class="row">
+        <div class="col-md-4" *ngFor="let inker of savedInkzer">
+          <div class="save-box">
+            <div class="save_box_img">
+              <img src="{{ inker.banner_image }}" />
+              <!-- <img src="assets/images/image_1-1.png"> -->
+              <img
+                *ngIf="inker.subscription == 2"
+                src="assets/images/elite_pro.svg"
+                class="plan_icon"
+              />
+            </div>
+            <div class="save_profile text-center">
+              <img src="{{ inker.profile_img }}" alt="" class="profile_img" />
+              <h4>{{ inker.name }}</h4>
+              <p>
+                <samp> {{ inker.reviewcount }} Reviews</samp>
+                <ngx-stars
+                  [initialStars]="inker.reviewstar"
+                  [color]="'#FFAC00'"
+                  [readonly]="true"
+                  [size]="1"
+                  [maxStars]="5"
+                ></ngx-stars>
+              
+              </p>
+              <button routerLink="/pages/artist-profile/{{ inker.user_name }}">
+                View Profile
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pr-5" *ngIf="collectionSize == 0">
+      <p style="color: #fff">No data found</p>
+    </div>
+    <div class="float-right pr-5" *ngIf="collectionSize != 0">
+      <pagination-controls
+        (pageChange)="p = $event"
+        previousLabel=""
+        nextLabel=""
+      ></pagination-controls>
+    </div>
+  </div>
+</div>

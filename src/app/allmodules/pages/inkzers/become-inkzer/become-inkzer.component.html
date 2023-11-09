@@ -1,0 +1,475 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+  <app-header></app-header>
+<div class="inkzer_details inkerList">
+  <div class="container">
+    <div class="width_70">
+      <h2>Find My Artist</h2>
+      <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore dolore magna aliqua.</p> -->
+    </div>
+  </div>
+</div>
+<div class="inkzer">
+  <div class="">
+    <div class="inkzer_box">
+      <div class="row">
+        <div class="col-lg-3 col-md-4 mb-3 order-md-1 order-2">
+          <div class="inkzer_filter">
+            <div class="filter_line">
+              <h4>Filters</h4>
+            </div>
+            <form
+              name="filterForm"
+              [formGroup]="filterForm"
+              (ngSubmit)="filter()"
+            >
+              <div class="filter_section">
+                <div class="">
+                  <div class="container px-0">
+                    <div id="accordion">
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="card-link"
+                            data-toggle="collapse"
+                            href="#menufour"
+                            aria-expanded="false"
+                            aria-controls="menufour"
+                          >
+                            Style of Work
+                            <span class="collapsed">
+                              <p><img src="assets/images/plus.png" /></p>
+                            </span>
+                            <span class="expanded">
+                              <p>
+                                <img src="assets/images/minus.png" />
+                              </p> </span
+                          ></a>
+                        </div>
+                        <div id="menufour" class="collapse">
+                          <div class="card-body">
+                            <div
+                              class="service_check"
+                              *ngFor="let style of styleOfworkList"
+                            >
+                              <mat-checkbox
+                                (change)="AddStyleOfWork(style.name, $event)"
+                                class="example-margin"
+                                >{{ style.name }}</mat-checkbox
+                              >
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br />
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="card-link"
+                            data-toggle="collapse"
+                            href="#menuthree"
+                            aria-expanded="false"
+                            aria-controls="menuthree"
+                          >
+                            Service
+                            <span class="collapsed">
+                              <p><img src="assets/images/plus.png" /></p>
+                            </span>
+                            <span class="expanded">
+                              <p>
+                                <img src="assets/images/minus.png" />
+                              </p> </span
+                          ></a>
+                        </div>
+                        <div id="menuthree" class="collapse">
+                          <div class="card-body">
+                            <div
+                              class="service_check"
+                              *ngFor="
+                                let service of serviceList.slice(0, counter)
+                              "
+                            >
+                              <mat-checkbox
+                                (change)="AddService(service.id, $event)"
+                                class="example-margin"
+                                >{{ service.name }}</mat-checkbox
+                              >
+                            </div>
+                            <button
+                              *ngIf="counter > 10"
+                              class="search_btn"
+                              type="button"
+                              (click)="toggleCancel()"
+                            >
+                              {{ showTxt }}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <br />
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="card-link"
+                            data-toggle="collapse"
+                            href="#menuone"
+                            aria-expanded="false"
+                            aria-controls="menuone"
+                          >
+                            State
+                            <span class="collapsed">
+                              <p><img src="assets/images/plus.png" /></p>
+                            </span>
+                            <span class="expanded">
+                              <p>
+                                <img src="assets/images/minus.png" />
+                              </p> </span
+                          ></a>
+                        </div>
+                        <div id="menuone" class="collapse">
+                          <div class="card-body">
+                            <div
+                              class="service_check"
+                              *ngFor="
+                                let state of stateList.slice(0, counter_state)
+                              "
+                            >
+                              <mat-checkbox
+                                (change)="Addstate(state.state, $event)"
+                                class="example-margin"
+                                >{{ state.state }}</mat-checkbox
+                              >
+                            </div>
+                            <button
+                              *ngIf="counter_state > 10"
+                              class="search_btn"
+                              type="button"
+                              (click)="toggleState()"
+                            >
+                              {{ showTxt_state }}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br />
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="card-link"
+                            data-toggle="collapse"
+                            href="#menusix"
+                            aria-expanded="false"
+                            aria-controls="menusix"
+                          >
+                            City
+                            <span class="collapsed">
+                              <p><img src="assets/images/plus.png" /></p>
+                            </span>
+                            <span class="expanded">
+                              <p>
+                                <img src="assets/images/minus.png" />
+                              </p> </span
+                          ></a>
+                        </div>
+                        <div id="menusix" class="collapse">
+                          <div class="card-body">
+                            <div
+                              class="service_check"
+                              *ngFor="
+                                let city of cityList.slice(0, counter_city)
+                              "
+                            >
+                              <mat-checkbox
+                                (change)="citystate(city.city, $event)"
+                                class="example-margin"
+                                >{{ city.city }}</mat-checkbox
+                              >
+                            </div>
+                            <button
+                              *ngIf="counter_city > 10"
+                              class="search_btn"
+                              type="button"
+                              (click)="toggleCity()"
+                            >
+                              {{ showTxt_city }}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <br />
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="card-link"
+                            data-toggle="collapse"
+                            href="#menufive"
+                            aria-expanded="false"
+                            aria-controls="menufive"
+                          >
+                            Ratings
+                            <span class="collapsed">
+                              <p><img src="assets/images/plus.png" /></p>
+                            </span>
+                            <span class="expanded">
+                              <p>
+                                <img src="assets/images/minus.png" />
+                              </p> </span
+                          ></a>
+                        </div>
+                        <div id="menufive" class="collapse">
+                          <div class="card-body">
+                            <div class="service_check">
+                              <mat-checkbox
+                                (change)="AddStar(5, $event)"
+                                class="example-margin"
+                              >
+                                5
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                              </mat-checkbox>
+                            </div>
+                            <div class="service_check">
+                              <mat-checkbox
+                                (change)="AddStar(4, $event)"
+                                class="example-margin"
+                              >
+                                4
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                              </mat-checkbox>
+                            </div>
+                            <div class="service_check">
+                              <mat-checkbox
+                                (change)="AddStar(3, $event)"
+                                class="example-margin"
+                              >
+                                3
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                              </mat-checkbox>
+                            </div>
+                            <div class="service_check">
+                              <mat-checkbox
+                                (change)="AddStar(2, $event)"
+                                class="example-margin"
+                              >
+                                2
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                              </mat-checkbox>
+                            </div>
+                            <div class="service_check">
+                              <mat-checkbox
+                                (change)="AddStar(1, $event)"
+                                class="example-margin"
+                              >
+                                1
+                                <img
+                                  class="starImg"
+                                  src="assets/images/start-rating.svg"
+                                />
+                              </mat-checkbox>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <br />
+
+                      <div class="card">
+                        <div class="card-header">
+                          <a
+                            class="card-link"
+                            data-toggle="collapse"
+                            href="#menutwo"
+                            aria-expanded="false"
+                            aria-controls="menutwo"
+                          >
+                            Name
+                            <span class="collapsed">
+                              <p><img src="assets/images/plus.png" /></p>
+                            </span>
+                            <span class="expanded">
+                              <p>
+                                <img src="assets/images/minus.png" />
+                              </p> </span
+                          ></a>
+                        </div>
+                        <div id="menutwo" class="collapse">
+                          <div class="card-body">
+                            <!-- <div
+                              class="service_check"
+                              *ngFor="
+                                let inkzer of inkzerList.slice(
+                                  0,
+                                  counter_inkzer
+                                )
+                              "
+                            >
+                              <mat-checkbox
+                                (change)="
+                                  AddInkzerName(inkzer.artist_name, $event)
+                                "
+                                class="example-margin"
+                                >{{ inkzer.artist_name }}
+                              </mat-checkbox>
+                            </div> -->
+
+                            <mat-form-field [floatLabel]="'never'">
+                              <input
+                                matInput
+                                placeholder="Enter Your Artist Name"
+                                formControlName="inkzer_name"
+                                [(ngModel)]="artistname"
+                                type="text"
+                                autocomplete="off"
+                                (change)="
+                                  AddInkzerName($event)
+                                "
+                              />
+                            </mat-form-field>
+
+                            <button
+                              *ngIf="counter_inkzer > 10"
+                              class="search_btn"
+                              type="button"
+                              (click)="toggleInkzer()"
+                            >
+                              {{ showTxt_inkzer }}
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br />
+                    </div>
+                  </div>
+                </div>
+                <div class="p-4">
+                  <button class="search_btn">Search</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-9 col-md-8 order-md-2 order-1">
+          <div class="inkzer_profile">
+            <!-- <h2>Inkzers</h2> -->
+            <div class="save_inkzer">
+              <div class="row">
+                <div
+                  class="col-lg-4 col-md-6"
+                  *ngFor="
+                    let artist of artistList
+                      | paginate: { itemsPerPage: 12, currentPage: page };
+                    let i = index
+                  "
+                >
+                  <div
+                    class="save-box"
+                    routerLink="/pages/artist-profile/{{ artist.user_name }}"
+                    style="cursor: pointer"
+                  >
+                    <div class="save_box_img">
+                      <img src="{{ artist.banner_image }}" />
+                      <img
+                        *ngIf="artist.subscription == 2"
+                        src="assets/images/elite_pro.svg"
+                        class="plan_icon"
+                      />
+                    </div>
+                    <div class="save_profile text-center">
+                      <img
+                        src="{{ artist.profile_img }}"
+                        alt=""
+                        class="profile_img"
+                      />
+                      <h4>{{ artist.artist_name }}</h4>
+                      <p>
+                      
+                        &nbsp; {{ artist.reviewcount }} Reviews
+                      </p>
+                      <ngx-stars
+                      [initialStars]="artist.reviewstar"
+                      [color]="'#FFAC00'"
+                      [readonly]="true"
+                      [size]="1"
+                      [maxStars]="5"
+                    ></ngx-stars>
+                      <button
+                        routerLink="/pages/artist-profile/{{
+                          artist.user_name
+                        }}"
+                      >
+                        View Profile
+                      </button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" *ngIf="artistList.length == 0">
+                  <p style="color: #fff"></p>
+                </div>
+              </div>
+              <div class="float-right pagination_" *ngIf="collectionSize >= 10">
+                <pagination-controls
+                  (pageChange)="page = $event"
+                  previousLabel=""
+                  nextLabel=""
+                >
+                </pagination-controls>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

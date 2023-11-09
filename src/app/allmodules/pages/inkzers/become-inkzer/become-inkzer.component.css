@@ -1,0 +1,407 @@
+.inkzer_details {
+  width: 100%;
+  float: left;
+  padding: 130px 0;
+  text-align: center;
+  background-image: url('/assets/images/become.png') ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Nunito", sans-serif !important;
+  /* background-position-y: 90px; */
+}
+
+/* .stars-line {
+justify-content: center !important;
+} */
+
+.panel-body p {
+  color: #fff;
+}
+
+.width_70 {
+  width: 62%;
+  margin: 0 auto;
+}
+
+.inkzer_details h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 60px;
+  /* line-height: 50px; */
+  color: #ffffff;
+}
+
+.inkzer_details p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 40px;
+  text-align: center;
+  padding-top: 10px;
+  color: #ffffff;
+}
+
+.rate {
+  width: 100%;
+  float: left;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.rate img {
+  vertical-align: baseline;
+}
+
+.save-box {
+  background: #161616;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+  width: 100%;
+  float: left;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.save_box_img {
+  position: relative;
+}
+
+.save_box_img img {
+  object-fit: cover;
+  object-position: center;
+  height: 140px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.plan_icon {
+  position: absolute;
+  top: 5px;
+  width: 45px !important;
+  right: 5px;
+  object-fit: none;
+  object-position: none;
+  height: auto !important;
+  width: 0%;
+}
+
+.save_profile {
+  z-index: 9;
+  position: relative;
+}
+
+.profile_img {
+  width: 100px;
+  height: 100px;
+  margin-top: -55px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #161616;
+}
+
+.save_profile h4 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 0;
+  color: #ffffff;
+  padding: 30px 0 10px;
+}
+
+.save_profile p {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 14px;
+  color: #e0e0e0;
+  margin: 5px 0;
+}
+
+.save_profile button {
+  background: #5438ff;
+  border-radius: 10px;
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  width: 100%;
+  color: #fff;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  margin-top: 20px;
+}
+
+.save_inkzer {
+  width: 100%;
+  float: left;
+  /* padding-top: 30px; */
+}
+
+.inkzer {
+  width: 100%;
+  float: left;
+  background: #000;
+  padding: 80px 80px 80px 0;
+}
+
+.inkzer h2 {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  color: #ffffff;
+}
+
+#accordion2 .panel-title a {
+  display: block;
+  font-weight: 200;
+  position: relative;
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 120%;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+#accordion2 .panel-title a:before {
+  content: "\f068";
+  font-family: "Font Awesome 5 Free";
+  width: 20px;
+  height: 20px;
+  line-height: 17px;
+  border-radius: 50%;
+  font-size: 9px;
+  font-weight: 900;
+  color: #ffac00;
+  text-align: center;
+  text-shadow: none;
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  border: 1px solid #ffac00;
+}
+
+#accordion2 .panel-title a.collapsed:before {
+  content: "\f067";
+}
+
+#accordion2 .panel-body {
+  /* padding: 0px 15px; */
+  font-size: 15px;
+  color: #222;
+  line-height: 27px;
+  border: none;
+}
+
+#accordion .card-header a {
+  display: block;
+  font-weight: 200;
+  position: relative;
+  font-family: Nunito;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 120%;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+#accordion2 .panel-body p {
+  margin-bottom: 0;
+}
+
+.inkzer_filter {
+  background: #161616;
+  box-shadow: 0px 0px 20px rgb(0 0 0 / 15%);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  width: 100%;
+  float: left;
+  height: auto;
+}
+
+.filter_line {
+  width: 100%;
+  float: left;
+  padding: 30px 30px 20px;
+  border-bottom: 2px solid #000;
+}
+
+.filter_line h4 {
+  font-family: Nunito !important;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.filter_section {
+  width: 100%;
+  float: left;
+}
+
+.pagination_ {
+  float: right;
+  margin-top: 20px;
+  padding-right: 20px;
+}
+
+.panel.panel-default {
+  border-bottom: 2px solid #000;
+  padding: 15px 30px;
+  width: 100%;
+  float: left;
+}
+
+.search_btn {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #ffffff;
+  background: #5438ff;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  width: 100%;
+  padding: 15px;
+  margin-top: 25px;
+}
+
+.mat-form-field {
+  width: 100%;
+  background: #000;
+  border-radius: 10px;
+  padding: 0px 20px 0px;
+  margin-bottom: 5px;
+  color: #e0e0e0;
+}
+
+::ng-deep .mat-form-field.mat-focused .mat-form-field-underline {
+  display: none;
+}
+
+.mat-form-field-appearance-legacy .mat-form-field-label {
+  color: #848282 !important;
+}
+
+.mat-form-field .mat-focused .mat-form-field-label {
+  color: #848282;
+}
+
+form img {
+  width: 30px;
+  padding-right: 10px;
+}
+
+.mat-checkbox {
+  font-family: Nunito;
+  font-style: normal;
+  font-weight: 200;
+  font-size: 16px;
+  line-height: 120%;
+  color: #ffffff;
+  margin-left: 10px !important;
+}
+
+.mat-checkbox .img {
+  vertical-align: sub !important;
+}
+
+.starImg {
+  vertical-align: sub !important;
+}
+
+.service_check {
+  width: 100%;
+  float: left;
+  padding: 10px 0;
+}
+
+.mat_serv {
+  margin-left: 5px;
+}
+
+@media (max-width: 767px) {
+  .inkzer {
+    padding: 80px 20px;
+  }
+  .width_70 {
+    width: 100%;
+  }
+  .pagination_ {
+    float: none;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+  }
+  .inkzer_details h2{
+    font-size: 46px;
+  }
+}
+
+
+.inkzer_filter .card-header,
+.inkzer_filter .card-link,
+.inkzer_filter .card-link:hover {
+  background-color: transparent;
+  text-align: left;
+  color: hotpink;
+}
+
+.inkzer_filter .card-body {
+  padding: 10px 10px;
+}
+
+.inkzer_filter .card {
+  width: 100%;
+  float: left;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  padding: 5px 15px;
+}
+
+.inkzer_filter p {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  color: white;
+  webkit-animation: minus 0.5s;
+  margin: 7px 0;
+}
+
+@keyframes minus {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+[aria-expanded="false"] > .expanded,
+[aria-expanded="true"] > .collapsed {
+  display: none;
+}
+
+.paragraph p {
+  position: inherit;
+  font-size: 14px;
+}
+
+.stars-line {
+  justify-content: center !important;
+}

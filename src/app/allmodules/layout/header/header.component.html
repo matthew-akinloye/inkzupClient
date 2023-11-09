@@ -1,0 +1,105 @@
+<div class="head">
+  <nav class="navbar fixed-top navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand" href="https://inkzup.com/">
+        <img class="logo" src="assets/images/logo_1.png" /></a>
+      <div class="collapse navbar-collapse" id="navbar"></div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon">
+          <mat-icon>menu</mat-icon>
+        </span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+
+
+          <!-- <li class="nav-item" *ngIf="!checkLogin">
+            <a class="nav-link" href="https://inkzup.com/" [routerLinkActiveOptions]="{ exact: true }"
+              routerLinkActive="active">GET
+              INKZED</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" routerLink="/pages/Inkzers-list" routerLinkActive="active"
+              style="text-transform: uppercase">
+              Find My Artist
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="!checkLogin">
+            <a class="nav-link Artists" href="https://inkzup.com/artists/" routerLinkActive="active"
+              style="text-transform: uppercase">
+              Artists
+            </a>
+          </li> -->
+
+          <li class="nav-item" *ngIf="checkLogin">
+            <a class="nav-link Explore" routerLink="/pages/my-booking" routerLinkActive="active"
+              style="text-transform: uppercase">
+              Bookings
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="checkLogin">
+            <a class="nav-link Explore" routerLink="/pages/message" routerLinkActive="active"
+              style="text-transform: uppercase">
+              Messages <samp *ngIf="msgCount > 0">{{ msgCount }}</samp>
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="checkLogin">
+            <a class="nav-link Favorites" routerLink="/pages/save-inkzer" routerLinkActive="active"
+              style="text-transform: uppercase">
+              Favorites
+            </a>
+          </li>
+          <li class="nav-item" *ngIf="!checkLogin">
+            <button class="login_btn" routerLink="/login-select">Log In</button>
+          </li>
+          <li class="nav-item" *ngIf="!checkLogin">
+            <button class="signup_btn" routerLink="/account">Sign Up</button>
+          </li>
+          <li class="nav-item" *ngIf="checkLogin">
+            <button mat-button [matMenuTriggerFor]="menu" class="drodown-btn">
+              <img src="{{ profile_img }}" class="profile_img" />
+              <span class="material-icons"> keyboard_arrow_down </span>
+            </button>
+            <mat-menu #menu="matMenu">
+              <!-- <button
+              mat-menu-item
+              style="color: #fff; border-bottom: 2px solid #161616"
+            >
+              <a class="nav-link" routerLink="/pages/message"
+                >Messages <samp *ngIf="msgCount > 0">{{ msgCount }}</samp>
+              </a>
+            </button> -->
+              <button mat-menu-item class="porfile_btn">
+                <a class="nav-link " routerLink="/pages/profile">Profile </a>
+              </button>
+              <!-- <button
+              mat-menu-item
+              style="color: #fff; border-bottom: 2px solid #161616"
+            >
+              <a class="nav-link" routerLink="/pages/my-booking">Bookings </a>
+            </button> -->
+
+              <!-- <button
+              mat-menu-item
+              style="color: #fff; border-bottom: 2px solid #161616"
+            >
+              <a class="nav-link" routerLink="/pages/save-inkzer">
+                Favorite Inkzers
+              </a>
+            </button> -->
+              <button mat-menu-item style="color: #fff; border-bottom: 2px solid #161616">
+                <a class="nav-link" routerLink="/pages/payment">
+                  Payment History
+                </a>
+              </button>
+              <button mat-menu-item style="color: #fff" (click)="logout()">
+                Logout
+              </button>
+            </mat-menu>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>

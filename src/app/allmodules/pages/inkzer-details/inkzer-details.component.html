@@ -1,0 +1,221 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="inkzer_banner">
+  <!-- <img src="../../../../assets/images/Inkzers_detail_banner.png" class="" id="inkzer_banner"> -->
+ 
+</div>
+<div class="inkzer_details artist_details">
+  <div class="container">
+    <div class="width_70">
+      <h2 class="animate__animated animate__fadeInUp animate__fast-800ms">
+        {{ artistData.artist_name }}
+        <img
+          *ngIf="artistData.subscription == 2"
+          src="assets/images/elite_pro.svg"
+        />
+      </h2>
+      <!-- <p class="animate__animated animate__fadeInUp animate__slow-2s">
+        {{ artistData.location }}
+      </p> -->
+      <div
+        class="stars rate animate__animated animate__fadeInUp animate__slow-4ms"
+        (click)="tabs.selectedIndex = 2"
+        (click)="goDown()"
+      >
+      
+      &nbsp; {{ artistData.reviewCount }} Reviews
+        <ngx-stars
+        [initialStars]="reviewCount"
+        [color]="'#FFAC00'"
+        [readonly]="true"
+        [size]="1"
+        [maxStars]="5"
+      >
+      </ngx-stars>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="save_book_btn">
+  <div class="btn_section">
+    <button
+      *ngIf="!artistData.isFavourite"
+      (click)="saveInkzer(artistData.user_id)"
+      class="add_fav"
+    >
+    Add Favorite
+    </button>
+    <button
+      *ngIf="artistData.isFavourite"
+      (click)="saveInkzer(artistData.user_id)"
+      class="add_fav"
+    >
+      Remove
+    </button>
+    <button routerLink="/pages/service/{{ artistData.user_name }}" class="save_btn">Book</button>
+  </div>
+</div>
+
+<div class="about">
+  <div class="container animate__fadeInUp">
+    <div class="row pb-5" style="border-bottom: 4px solid #161616">
+      <div class="col-md-6">
+        <div class="about_text">
+          <h2 class="animate__animated animate__fadeInUp animate__fast-800ms">
+            About {{ artistData.name }}
+          </h2>
+          <p class="animate__animated animate__fadeInUp animate__slow-2s">
+            {{ artistData.about_me }}
+          </p>
+          <div class="about_profile">
+            <img src="{{ artistData.profile_img }}" />
+            <div class="profile_text">
+              <p>{{ artistData.user_name }}</p>
+            </div>
+          </div>
+          <h2>Style of Work</h2>
+          <p>{{ artistData.workStylecomma }}</p>
+          <button (click)="messageInkzer(artistData.user_id)">
+            Message Inkzer
+          </button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="about_location">
+          <div class="board_about" *ngIf="address_show">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="assets/images/location1.svg" />
+              </div>
+              <div class="col-md-9">
+                <h4>Location</h4>
+                <p class="mb-0">{{ artistData.studio_name }}</p>
+                <p *ngIf="address_detail_show">
+                  {{ artistData.address }}
+                  {{ artistData.city }}, {{ artistData.zipcode }}
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="board_about" *ngIf="working_hours_show">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="assets/images/clock.svg" />
+              </div>
+              <div class="col-md-9">
+                <h4 class="pb-2">Business Hours</h4>
+                <!-- business hours box with day start and end time -->
+                <div class="business_hours">
+                  <div *ngFor="let business of artistData.workhours">
+                    <div class="row">
+                      <div class="col-md-4 col-3">
+                        <p>{{ business.day }}</p>
+                      </div>
+                      <div class="col-md-8 col-9">
+                        <div class="row" *ngIf="business.opening_time !== null">
+                          <div class="col-md-12">
+                            <p class="text-center">{{ business.opening_time }} - {{ business.closing_time }}</p>
+                          </div>
+                        </div>
+
+                        <div class="row" *ngIf="business.opening_time == null && business.closing_time == null && business.open_close == 1">
+                          <div class="col-md-12">
+                            <p class="text-center">Open 24 Hours</p>
+                          </div>
+                        </div>
+                        <div class="row" *ngIf="business.opening_time == null && business.closing_time == null && business.open_close == 2">
+                          <div class="col-md-12">
+                            <p class="text-center">Closed</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="board_about" *ngIf="info_refund || info_cancel">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="assets/images/policy1.svg" />
+              </div>
+              <div class="col-md-9">
+                <h4>Policies</h4>
+                <p class="pb-1" *ngIf="info_refund && info_refund.length">
+                  <b>Refund Policy:</b>
+                  <span class="collapsable">
+                    {{
+                      info_refund && info_refund.length > firstCount
+                        ? (info_refund | slice: 0:counter) + ".."
+                        : info_refund
+                    }}
+                    <span
+                      class="redTxt"
+                      *ngIf="info_refund && info_refund.length > 100"
+                      (click)="toggleSkil(info_refund)"
+                    >
+                      {{ showTxt_refund }}
+                    </span>
+                  </span>
+                </p>
+                <p *ngIf="info_cancel && info_cancel.length">
+                  <b>Cancellation Policy:</b>
+                  <span class="collapsable">
+                    {{
+                      info_cancel && info_cancel.length > firstCount
+                        ? (info_cancel | slice: 0:counter_cancel) + ".."
+                        : info_cancel
+                    }}
+                    <span
+                      class="redTxt"
+                      *ngIf="info_cancel && info_cancel.length > 100"
+                      (click)="toggleCancel(info_cancel)"
+                    >
+                      {{ showTxt_cancel }}
+                    </span>
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="board_about">
+            <div class="row">
+              <div class="col-md-3">
+                <img src="assets/images/link1.svg" />
+              </div>
+              <div class="col-md-9">
+                <h4>Links</h4>
+                <a
+                  *ngIf="artistData.fb_link"
+                  href="{{ artistData.fb_link }}"
+                  target="_blank"
+                  ><img src="assets/images/facebook.svg" class="hover_"
+                /></a>
+                <a
+                  *ngIf="artistData.instagram_link"
+                  href="{{ artistData.instagram_link }}"
+                  target="_blank"
+                  ><img src="assets/images/instagram.svg" class="hover_"
+                /></a>
+                <a
+                  *ngIf="artistData.website_link"
+                  href="{{ artistData.website_link }}"
+                  target="_blank"
+                  ><img src="assets/images/website.svg" class="hover_"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about_tabs" id="targetRed">
+      <mat-tab-group #tabs>    
+           
+        <mat-tab>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

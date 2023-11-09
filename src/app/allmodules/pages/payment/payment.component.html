@@ -1,0 +1,86 @@
+<app-page-loader *ngIf="isLoad"> </app-page-loader>
+<div class="booking">
+  <div class="container">
+    <button>
+      <img
+        style="vertical-align: unset"
+        src="assets/images/back_arrow.svg"
+        (click)="back()"
+      />
+    </button>
+    <span>Payment History</span>
+
+    <div
+      class="details_booking"
+      *ngFor="
+        let payment of paymentHistory
+          | paginate: { itemsPerPage: 10, currentPage: page };
+        let i = index
+      "
+    >
+      <div class="row">
+        <div class="col-md-2 col-lg-2 col-8 m-auto">
+          <img src="{{ payment.filename }}" class="my-3" />
+        </div>
+        <div class="col-md-10">
+          <div class="details_booking_text">
+            <h5 routerLink="/pages/invoice/{{ payment.payment_uuid }}">
+              {{ payment.artist_name }} | {{ payment.name }}
+              <span
+                *ngIf="payment.status == 3"
+                class="float-right"
+                style="font-size: 20px; color: #ffac00"
+              >
+                Pending
+              </span>
+              <span
+                *ngIf="payment.status == 1"
+                class="float-right"
+                style="font-size: 20px; color: #04c600"
+              >
+                Paid
+              </span>
+            </h5>
+            <p>{{ payment.description }}</p>
+            <div class="box_detail">
+              <div class="row">
+                <div class="col-md-3 col-6 pl-5">
+                  <h6>Total Amount</h6>
+                  <p class="my-1">${{ payment.price | number }}</p>
+                </div>
+                <div class="col-md-3 col-6 pl-5 border_2">
+                  <h6>Deposit</h6>
+                  <p class="my-1">${{ payment.deposite | number }}</p>
+                </div>
+                <div class="col-md-3 col-6 pl-5 border_1">
+                  <h6>Cash</h6>
+                  <p class="my-1">$0</p>
+                </div>
+                <div class="col-md-3 col-6 pl-5">
+                  <h6>Due Amount</h6>
+                  <p class="my-1">
+                    ${{
+                      payment.balance <= 0 ? 0.0 : (payment.balance | number)
+                    }}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="Page-navigation" *ngIf="collectionSize == 0">
+      <p style="color: #fff">No data found</p>
+    </div>
+    <div *ngIf="paymentHistory.length >= 10">
+      <div class="Page-navigation">
+        <pagination-controls
+          (pageChange)="page = $event"
+          previousLabel=""
+          nextLabel=""
+        ></pagination-controls>
+      </div>
+    </div>
+  </div>
+</div>

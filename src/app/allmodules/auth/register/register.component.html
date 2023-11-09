@@ -1,0 +1,127 @@
+<app-auth-loader *ngIf="isLoad"> </app-auth-loader>
+<div class="auth">
+  <div class="container">
+    <div class="text-center">
+      <img class="cursor-pointer" routerLink="" src="assets/images/logo.svg" alt="Logo Image" class="pointer" />
+    </div>
+    <div class="row">
+      <div class="col-md-5">
+        <div class="auth_form">
+          <!-- <h3>
+            Create Inkzup <br />
+            Customer Account
+          </h3> -->
+          <h3>
+            Create An Inkzup<br />
+            Customer Account
+          </h3>
+          <form name="registerForm" [formGroup]="registerForm" (ngSubmit)="register()">
+            <div class="mb-4">
+              <h6>Name*</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input matInput placeholder="Full Name" formControlName="name" autocomplete="off" />
+                <img matPrefix src="assets/images/user.png" />
+              </mat-form-field>
+              <span class="text-danger float-left errSpan" *ngIf="name_Err">
+                {{ name_Err }}</span>
+            </div>
+            <div class="mb-4">
+              <h6>Email*</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input matInput placeholder="Email" formControlName="email" type="email" autocomplete="off"
+                  [attr.readonly]="isReadOnly1" onfocus="this.removeAttribute('readonly');" />
+                <img matPrefix src="assets/images/email.png" />
+              </mat-form-field>
+              <span class="text-danger float-left errSpan" *ngIf="emailErr">
+                {{ emailErr }}</span>
+            </div>
+            <div class="mb-4">
+              <h6>Phone Number*</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input maxlength="14" matInput placeholder="Phone Number" formControlName="phone" autocomplete="off"
+                  (keyup)="
+                    phoneFormat($event, $event.keyCode == 8 ? true : false)
+                  " />
+                <img matPrefix src="assets/images/phone.png" />
+              </mat-form-field>
+              <span class="text-danger float-left errSpan" *ngIf="phone_Err">
+                {{ phone_Err }}</span>
+            </div>
+            <!-- <div class="mb-4">
+              <h6>Password</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input matInput [type]="hide ? 'password' : 'text'" placeholder="Password" formControlName="password"
+                  autocomplete="off" [attr.readonly]="isReadOnly1" onfocus="this.removeAttribute('readonly');" />
+                <button type="button" mat-icon-button matSuffix (click)="hide = !hide"
+                  [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide">
+                  <mat-icon style="color: #ffac00">{{
+                    hide ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                </button>
+                <img matPrefix src="assets/images/password.png" />
+              </mat-form-field>
+              <span class="text-danger float-left errSpan" *ngIf="password_Err">
+                {{ password_Err }}</span>
+            </div>
+            <div class="">
+              <h6>Confirm Password</h6>
+              <mat-form-field [floatLabel]="'never'">
+                <input matInput [type]="hide1? 'password' : 'text'" placeholder="Confirm Password"
+                  formControlName="confirm_password" autocomplete="off" [attr.readonly]="isReadOnly1"
+                  onfocus="this.removeAttribute('readonly');" />
+                <button type="button" mat-icon-button matSuffix (click)="hide1 = !hide1"
+                  [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide1">
+                  <mat-icon style="color: #ffac00">{{
+                    hide1 ? "visibility_off" : "visibility"
+                    }}</mat-icon>
+                </button>
+                <img matPrefix src="assets/images/password.png" />
+              </mat-form-field>
+              <span class="text-danger float-left errSpan" *ngIf="confirm_password_Err">{{ confirm_password_Err
+                }}</span>
+            </div> -->
+            <div class="mt-3">
+              <mat-checkbox formControlName="age">The website requires you to be 18+ or older</mat-checkbox>
+              <span class="text-danger float-left errSpan" *ngIf="age_err">
+                {{ age_err }}</span>
+              <mat-checkbox formControlName="term">Accept
+                <a class="termCondition" routerLink="/pages/terms-conditions" target="_blank">Terms of Conditions</a>
+                and
+                <a class="termCondition" target="_blank" routerLink="/pages/privacy-policy">Privacy Policy</a>
+              </mat-checkbox>
+              <span class="text-danger float-left errSpan" *ngIf="term_err">
+                {{ term_err }}</span>
+              <div></div>
+            </div>
+            <button class="submit_btn" type="submit">Register</button>
+          </form>
+          <!-- <div class="or text-center">------------ OR ------------</div> -->
+      <!--   <button type="button" (click)="signinWithGoogle()" mat-stroked-button class="google_btn">
+            <img src="assets/images/google.png" /> Sign Up With Goggle
+          </button> --> 
+          <!-- <button type="button" (click)="signinWithFacebook()" mat-stroked-button class="google_btn" style="width:450px;">
+            <img src="assets/images/facebook.png" style="width: 15px" /> Sign Up With Facebook
+          </button>
+          <span class="text-danger float-left errSpan" *ngIf="SocialEmailErr">
+            {{ SocialEmailErr }}
+          </span> -->
+          <div class="foot">
+            <div class="container">
+              <p>Already have an account? <a routerLink="/login"> Log In</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-1"></div>
+      <div class="col-md-6">
+        <div class="auth_img mt-5">
+          <img src="assets/images/register.png" alt="" />
+          <h2>
+            <!-- Book appointment hassle-free with our expertise tattoo artists. -->
+            Book An Appointment Hassle-Free With Our Expertise Tattoo Artists.
+          </h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

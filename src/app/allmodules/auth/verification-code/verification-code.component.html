@@ -1,0 +1,58 @@
+<app-auth-loader *ngIf="isLoad"> </app-auth-loader>
+<div class="auth">
+  <div class="container">
+    <div class="text-center">
+      <img class="cursor-pointer" routerLink="" src="assets/images/logo.svg" alt="Logo Image" class="pointer" />
+  </div>
+    <div class="row">
+      <div class="col-md-6">
+      
+        <div class="auth_form">
+          <h3>Verification</h3>
+          <p>
+            We sent a code to your phone for verification. Please enter the code
+            below.
+          </p>
+
+          <div class="mb-4">
+            <h6>Code</h6>
+            <!-- <mat-form-field [floatLabel]="'never'">
+                                <input matInput>
+                            </mat-form-field>
+                            <mat-form-field [floatLabel]="'never'">
+                                <input matInput>
+                            </mat-form-field>
+                            <mat-form-field [floatLabel]="'never'">
+                                <input matInput>
+                            </mat-form-field>
+                            <mat-form-field [floatLabel]="'never'">
+                                <input matInput>
+                            </mat-form-field>
+                            <mat-form-field [floatLabel]="'never'">
+                                <input matInput>
+                            </mat-form-field>
+                            <mat-form-field [floatLabel]="'never'">
+                                <input matInput>
+                            </mat-form-field> -->
+            <ng-otp-input
+              (onInputChange)="onOtpChange($event)"
+              [config]="config"
+            ></ng-otp-input>
+            <span class="text-danger float-left errSpan" *ngIf="errMsg">
+              {{ errMsg }}</span
+            >
+            <span class="text-danger float-left errSpan" *ngIf="formErr">
+              {{ formErr }}</span
+            >
+          </div>
+          <button (click)="verifyOtp()" class="submit_btn">Submit</button>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="auth_img">
+          <img src="assets/images/auth.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,379 @@
+<app-page-loader *ngIf="isLoad"></app-page-loader>
+<div class="view_booking">
+  <form name="consentForm" [formGroup]="consentForm">
+    <div class="container">
+      <!-- <button><img src="assets/images/back_arrow.svg" alt="" ></button> -->
+      <!-- <span>Consent Form</span> -->
+      <div class="consent">
+        <div class="consent_1">
+          <h4 class="text-center">TATTOO CONSENT FORM</h4>
+          <p>
+            THIS DOCUMENT IS TWO-PAGES. PLEASE INITIAL IN THE BOXES PROVIDED
+            AFTER READING TO SHOW THAT YOU UNDERSTAND EACH PROVISION. FEEL FREE
+            TO ASK ANY QUESTIONS REGARDING THIS WAIVER.
+          </p>
+          <ul>
+            <li>
+              In consideration of receiving a tattoo from
+              <mat-form-field>
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  formControlName="studio_name"
+                  class="text-center"
+                />
+              </mat-form-field>
+              including its artists, associates, apprentices, agents, or any
+              employees (hereinafter referred to as the “Tattoo Studio” I agree
+              to the following:
+            </li>
+
+            <li>
+              I,
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  formControlName="client_name"
+                  class="text-center"
+                /> </mat-form-field
+              >,have been fully informed of the inherent risks associated with
+              getting a tattoo. Therefore, I fully understand that these risks,
+              known and unknown, can lead to injury including but not limited
+              to: infection, scarring, difficulties in the detection of melanoma
+              and allergic reactions to tattoo pigment, latex gloves and/or
+              soap. Having been informed of the potential risks associated with
+              getting a tattoo I wish to proceed with the tattoo procedure and
+              application and freely accept and expressly assume any and all
+              risks that may arise from tattooing.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  [value]="client_inital"
+                  readonly
+                  class="text-center"
+                />
+              </mat-form-field>
+              I WAIVE AND RELEASE to the fullest extent permitted by law any
+              person of the Tattoo Studio from all liability whatsoever,
+              including but not limited to, any and all claims or causes of
+              action that I, my estate, heirs, executors or assigns may have for
+              personal injury or otherwise, including any direct and/or
+              consequential damages, which result or arise from the procedure
+              and application of my tattoo, whether caused by the negligence or
+              fault of either the Tattoo Studio, or otherwise.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              The Tattoo Studio has given me the full opportunity to ask any
+              question about the procedure and application of my tattoo and all
+              of my questions, if any, have been answered to my total
+              satisfaction.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              The Tattoo Studio has given me instructions on the care of my
+              tattoo while it's healing. I understand and will follow them. I
+              acknowledge that it is possible that the tattoo can become
+              infected, particularly if I do not follow the instructions given
+              to me. If any touch-up work to the tattoo is needed due to my own
+              negligence, I agree that the work will be done at my own expense.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              I am not under the influence of alcohol or drugs, and I am
+              voluntarily submitting to be tattooed by the Tattoo Studio without
+              duress or coercion.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              I do not suffer from diabetes, epilepsy, hemophilia, heart
+              condition(s), nor do I take blood thinning medication. I do not
+              have any other medical or skin condition that may interfere with
+              the procedure, application or healing of the tattoo. I am not the
+              recipient of an organ or bone marrow transplant or, if I am, I
+              have taken the prescribed preventative regimen of antibiotics that
+              is required by my doctor in advance of any invasive procedure such
+              as tattooing or piercing. I am not pregnant or nursing. I do not
+              have a mental impairment that may affect my judgement in getting
+              the tattoo.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              The Tattoo Studio is not responsible for the meaning or spelling
+              of the symbol or text that I have provide to them or chosen from
+              the flash (design) sheets.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              Variations in color and design may exist between the tattoo art I
+              have selected and the actual tattoo when it is applied to my body.
+              I also understand that over time, the colors and the clarity of my
+              tattoo will fade due to unprotected exposure to the sun and the
+              naturally occurring dispersion of pigment under the skin.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              A tattoo is a permanent change to my appearance and can only be
+              removed by laser or surgical means, which can be disfiguring
+              and/or costly and which in all likelihood will not result in the
+              restoration of my skin to its exact appearance before being
+              tattooed.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              I release the right to any photographs taken of me and the tattoo
+              and give consent in advance to their reproduction in print or
+              electronic form. (For assurance, if you do not initial this
+              provision, please inform the Tattoo Studio NOT to take any
+              pictures of you and your completed tattoo).
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              I agree that the Tattoo Studio has a NO REFUND policy on tattoos,
+              piercing and/or retail sales and I will not ask for a refund for
+              any reason whatsoever.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              I agree to reimburse the Tattoo Studio for any attorneys' fees and
+              costs incurred in any legal action I bring against the Tattoo
+              Studio and in which either the Artist of the Tattoo Studio is the
+              prevailing party. I agree that the courts of located in the County
+              shall have jurisdiction and venue over me and shall have exclusive
+              jurisdiction for the purposes of litigating any dispute arising
+              out of or related to this agreement.
+            </li>
+            <li>
+              <mat-form-field appearance="legacy">
+                <input
+                  matInput
+                  placeholder=""
+                  readonly
+                  [value]="client_inital"
+                  class="text-center"
+                />
+              </mat-form-field>
+              I acknowledge that I have been given adequate opportunity to read
+              and understand this document that it was not presented to me at
+              the last minute and grasp that I am signing a legal contract
+              waiving certain rights to recover damages against the Tattoo
+              Studio.
+            </li>
+            <li>
+              If any provision, section, subsection, clause or phrase of this
+              release is found to be unenforceable or invalid, that portion
+              shall be severed from this contract. The remainder of this
+              contract will then be construed as though the unenforceable
+              portion had never been contained in this document.
+            </li>
+          </ul>
+          <div class="consent_form">
+            <div class="check">
+              <mat-checkbox
+                class="example-margin"
+                formControlName="term1"
+                aria-readonly="true"
+              >
+                <div class="mat-checkbox">
+                  <p class="pl-3 text-style">
+                    I hereby declare that I am of legal age (and have provided
+                    valid proof of age and identification) and am competent to
+                    sign this Agreement.
+                  </p>
+                </div>
+              </mat-checkbox>
+              <mat-checkbox
+                class="example-margin"
+                formControlName="term2"
+                aria-readonly="true"
+              >
+                <div class="mat-checkbox">
+                  <p class="pl-3 text-style">
+                    I HAVE READ THE AGREEMENT, I UNDERSTAND IT, AND I AGREE TO
+                    BE BOUND BY IT.
+                  </p>
+                </div>
+              </mat-checkbox>
+            </div>
+
+            <div class="row">
+              <div class="col-md-4">
+                <p class="signature">Signature:</p>
+                <mat-form-field
+                  appearance="legacy"
+                  style="background: transparent"
+                >
+                  <input
+                    matInput
+                    placeholder=""
+                    style="color: #fff"
+                    readonly
+                    formControlName="signature"
+                  />
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-4">
+                <p>Address:</p>
+                <mat-form-field
+                  appearance="legacy"
+                  style="background: transparent"
+                >
+                  <input
+                    matInput
+                    style="color: #fff"
+                    readonly
+                    formControlName="address"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="col-md-4">
+                <p>City:</p>
+                <mat-form-field
+                  appearance="legacy"
+                  style="background: transparent"
+                >
+                  <input
+                    matInput
+                    style="color: #fff"
+                    readonly
+                    formControlName="city"
+                  />
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-4">
+                <p>State:</p>
+                <mat-form-field
+                  appearance="legacy"
+                  style="background: transparent"
+                >
+                  <input
+                    matInput
+                    style="color: #fff"
+                    readonly
+                    formControlName="state"
+                  />
+                </mat-form-field>
+              </div>
+              <div class="col-md-6">
+                <p>Date of Birth:</p>
+                <mat-form-field style="background: transparent">
+                  <input
+                    autocomplete="off"
+                    matInput
+                    readonly
+                    formControlName="dob"
+                    style="color: #fff"
+                  />
+                </mat-form-field>
+              </div>
+
+              <div class="col-md-8">
+                <p>Form of Identification:</p>
+                <mat-form-field
+                  appearance="legacy"
+                  style="background: transparent"
+                >
+                  <input
+                    matInput
+                    style="color: #fff"
+                    readonly
+                    formControlName="identification"
+                  />
+                </mat-form-field>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="save_btn float-right">Next</button>
+      </div>
+    </div>
+  </form>
+</div>
